@@ -1,0 +1,1516 @@
+Source,Target,ExporterCode,ExporterName,ImporterCode,ImporterName,Type,Weight
+1,78,4,Afghanistan,380,Italy,Directed,50581.43
+1,168,4,Afghanistan,784,United Arab Emirates,Directed,0.662
+2,33,8,Albania,156,China,Directed,1.188
+2,78,8,Albania,380,Italy,Directed,26900.309
+2,157,8,Albania,724,Spain,Directed,199025.774
+3,8,12,Algeria,36,Australia,Directed,129479.125
+3,9,12,Algeria,40,Austria,Directed,115323.754
+3,14,12,Algeria,56,Belgium,Directed,25455.756
+3,19,12,Algeria,76,Brazil,Directed,673550.113
+3,33,12,Algeria,156,China,Directed,23902.209
+3,41,12,Algeria,192,Cuba,Directed,243085.425
+3,54,12,Algeria,251,France,Directed,2.184950978e6
+3,59,12,Algeria,276,Germany,Directed,470370.303
+3,63,12,Algeria,300,Greece,Directed,533864.213
+3,73,12,Algeria,360,Indonesia,Directed,298576.333
+3,78,12,Algeria,380,Italy,Directed,703987.331
+3,81,12,Algeria,392,Japan,Directed,230764.228
+3,86,12,Algeria,410,Rep. of Korea,Directed,611655.749
+3,99,12,Algeria,458,Malaysia,Directed,139317.8
+3,116,12,Algeria,528,Netherlands,Directed,1.291816379e6
+3,122,12,Algeria,554,New Zealand,Directed,28898.225
+3,136,12,Algeria,620,Portugal,Directed,134827.394
+3,149,12,Algeria,699,India,Directed,344721.409
+3,150,12,Algeria,702,Singapore,Directed,76692.161
+3,157,12,Algeria,724,Spain,Directed,1.417045831e6
+3,162,12,Algeria,757,Switzerland,Directed,25186.809
+3,164,12,Algeria,764,Thailand,Directed,643108.317
+3,175,12,Algeria,804,Ukraine,Directed,37958.321
+3,177,12,Algeria,826,United Kingdom,Directed,969481.767
+3,179,12,Algeria,842,USA,Directed,414237.96
+4,157,20,Andorra,724,Spain,Directed,0.847
+5,8,24,Angola,36,Australia,Directed,57648.376
+5,14,24,Angola,56,Belgium,Directed,4871.83
+5,29,24,Angola,124,Canada,Directed,407174.353
+5,32,24,Angola,152,Chile,Directed,487458.157
+5,33,24,Angola,156,China,Directed,1.9295799849e7
+5,54,24,Angola,251,France,Directed,176223.83
+5,61,24,Angola,292,Gibraltar,Directed,67659.074
+5,73,24,Angola,360,Indonesia,Directed,417206.191
+5,77,24,Angola,376,Israel,Directed,60555.501
+5,78,24,Angola,380,Italy,Directed,121217.703
+5,81,24,Angola,392,Japan,Directed,63996.993
+5,86,24,Angola,410,Rep. of Korea,Directed,65020.768
+5,99,24,Angola,458,Malaysia,Directed,126316.975
+5,105,24,Angola,490,"Other Asia, nes",Directed,201066.172
+5,116,24,Angola,528,Netherlands,Directed,152398.958
+5,136,24,Angola,620,Portugal,Directed,59356.405
+5,149,24,Angola,699,India,Directed,1.728305389e6
+5,150,24,Angola,702,Singapore,Directed,461946.576
+5,152,24,Angola,704,Viet Nam,Directed,19807.293
+5,155,24,Angola,710,South Africa,Directed,367859.724
+5,157,24,Angola,724,Spain,Directed,265198.209
+5,164,24,Angola,764,Thailand,Directed,1.161532304e6
+5,168,24,Angola,784,United Arab Emirates,Directed,144824.317
+5,179,24,Angola,842,USA,Directed,1.015750364e6
+5,180,24,Angola,858,Uruguay,Directed,267781.513
+6,8,31,Azerbaijan,36,Australia,Directed,21297.559
+6,9,31,Azerbaijan,40,Austria,Directed,137139.91
+6,14,31,Azerbaijan,56,Belgium,Directed,0.026
+6,26,31,Azerbaijan,112,Belarus,Directed,270984.462
+6,29,31,Azerbaijan,124,Canada,Directed,215527.136
+6,33,31,Azerbaijan,156,China,Directed,102667.271
+6,40,31,Azerbaijan,191,Croatia,Directed,697051.564
+6,43,31,Azerbaijan,203,Czechia,Directed,261458.205
+6,54,31,Azerbaijan,251,France,Directed,62550.694
+6,59,31,Azerbaijan,276,Germany,Directed,629124.545
+6,63,31,Azerbaijan,300,Greece,Directed,48262.581
+6,73,31,Azerbaijan,360,Indonesia,Directed,87124.861
+6,76,31,Azerbaijan,372,Ireland,Directed,41737.536
+6,77,31,Azerbaijan,376,Israel,Directed,887543.953
+6,78,31,Azerbaijan,380,Italy,Directed,6.114707694e6
+6,105,31,Azerbaijan,490,"Other Asia, nes",Directed,141172.436
+6,136,31,Azerbaijan,620,Portugal,Directed,588674.861
+6,139,31,Azerbaijan,642,Romania,Directed,80876.891
+6,140,31,Azerbaijan,643,Russian Federation,Directed,535.008
+6,149,31,Azerbaijan,699,India,Directed,584154.778
+6,152,31,Azerbaijan,704,Viet Nam,Directed,72767.901
+6,157,31,Azerbaijan,724,Spain,Directed,554211.194
+6,162,31,Azerbaijan,757,Switzerland,Directed,48391.609
+6,164,31,Azerbaijan,764,Thailand,Directed,134264.753
+6,169,31,Azerbaijan,788,Tunisia,Directed,508109.394
+6,170,31,Azerbaijan,792,TÃ¼rkiye,Directed,331599.285
+6,175,31,Azerbaijan,804,Ukraine,Directed,374804.909
+6,177,31,Azerbaijan,826,United Kingdom,Directed,367555.53
+7,32,32,Argentina,152,Chile,Directed,36359.52
+7,71,32,Argentina,348,Hungary,Directed,0.001
+7,73,32,Argentina,360,Indonesia,Directed,11773.784
+7,116,32,Argentina,528,Netherlands,Directed,288948.661
+7,150,32,Argentina,702,Singapore,Directed,17690.312
+7,168,32,Argentina,784,United Arab Emirates,Directed,75954.866
+7,179,32,Argentina,842,USA,Directed,772181.264
+8,21,36,Australia,90,Solomon Isds,Directed,0.031
+8,22,36,Australia,96,Brunei Darussalam,Directed,357577.735
+8,29,36,Australia,124,Canada,Directed,0.115
+8,33,36,Australia,156,China,Directed,157775.514
+8,52,36,Australia,242,Fiji,Directed,1.546
+8,62,36,Australia,296,Kiribati,Directed,39.361
+8,73,36,Australia,360,Indonesia,Directed,760033.576
+8,75,36,Australia,368,Iraq,Directed,23.036
+8,81,36,Australia,392,Japan,Directed,131265.681
+8,86,36,Australia,410,Rep. of Korea,Directed,1.586805566e6
+8,99,36,Australia,458,Malaysia,Directed,220459.205
+8,114,36,Australia,520,Nauru,Directed,2.656
+8,116,36,Australia,528,Netherlands,Directed,0.458
+8,120,36,Australia,540,New Caledonia,Directed,3.305
+8,122,36,Australia,554,New Zealand,Directed,16921.081
+8,131,36,Australia,598,Papua New Guinea,Directed,69166.094
+8,134,36,Australia,608,Philippines,Directed,42649.0
+8,145,36,Australia,686,Senegal,Directed,9.63
+8,150,36,Australia,702,Singapore,Directed,1.512786323e6
+8,157,36,Australia,724,Spain,Directed,10370.635
+8,164,36,Australia,764,Thailand,Directed,744866.922
+8,168,36,Australia,784,United Arab Emirates,Directed,70974.234
+8,177,36,Australia,826,United Kingdom,Directed,0.002
+9,78,40,Austria,380,Italy,Directed,1.533
+9,116,40,Austria,528,Netherlands,Directed,0.033
+9,122,40,Austria,554,New Zealand,Directed,6.22
+9,151,40,Austria,703,Slovakia,Directed,0.511
+9,168,40,Austria,784,United Arab Emirates,Directed,2.972
+11,14,48,Bahrain,56,Belgium,Directed,0.196
+11,81,48,Bahrain,392,Japan,Directed,446988.176
+11,86,48,Bahrain,410,Rep. of Korea,Directed,0.402
+11,93,48,Bahrain,430,Liberia,Directed,521.106
+11,168,48,Bahrain,784,United Arab Emirates,Directed,0.12
+12,168,50,Bangladesh,784,United Arab Emirates,Directed,0.735
+13,80,52,Barbados,388,Jamaica,Directed,7125.036
+13,161,52,Barbados,752,Sweden,Directed,0.117
+14,9,56,Belgium,40,Austria,Directed,0.032
+14,19,56,Belgium,76,Brazil,Directed,0.018
+14,30,56,Belgium,144,Sri Lanka,Directed,0.014
+14,38,56,Belgium,180,Dem. Rep. of the Congo,Directed,0.122
+14,40,56,Belgium,191,Croatia,Directed,0.166
+14,44,56,Belgium,208,Denmark,Directed,21.855
+14,49,56,Belgium,226,Equatorial Guinea,Directed,1.857
+14,51,56,Belgium,233,Estonia,Directed,0.967
+14,53,56,Belgium,246,Finland,Directed,1.397
+14,54,56,Belgium,251,France,Directed,1985.266
+14,59,56,Belgium,276,Germany,Directed,1359.592
+14,67,56,Belgium,324,Guinea,Directed,7.944
+14,71,56,Belgium,348,Hungary,Directed,0.016
+14,73,56,Belgium,360,Indonesia,Directed,14.372
+14,76,56,Belgium,372,Ireland,Directed,0.168
+14,92,56,Belgium,428,Latvia,Directed,0.047
+14,95,56,Belgium,440,Lithuania,Directed,0.098
+14,96,56,Belgium,442,Luxembourg,Directed,0.639
+14,116,56,Belgium,528,Netherlands,Directed,316034.45
+14,126,56,Belgium,579,Norway,Directed,0.079
+14,135,56,Belgium,616,Poland,Directed,0.063
+14,139,56,Belgium,642,Romania,Directed,0.033
+14,149,56,Belgium,699,India,Directed,0.018
+14,151,56,Belgium,703,Slovakia,Directed,0.246
+14,157,56,Belgium,724,Spain,Directed,37195.395
+14,168,56,Belgium,784,United Arab Emirates,Directed,8.086
+14,177,56,Belgium,826,United Kingdom,Directed,9.581
+14,179,56,Belgium,842,USA,Directed,7767.386
+16,19,68,Bolivia (Plurinational State of),76,Brazil,Directed,202.432
+16,33,68,Bolivia (Plurinational State of),156,China,Directed,17919.057
+16,35,68,Bolivia (Plurinational State of),170,Colombia,Directed,0.041
+16,116,68,Bolivia (Plurinational State of),528,Netherlands,Directed,15378.348
+16,150,68,Bolivia (Plurinational State of),702,Singapore,Directed,11329.666
+16,179,68,Bolivia (Plurinational State of),842,USA,Directed,8752.519
+17,140,70,Bosnia Herzegovina,643,Russian Federation,Directed,5158.464
+17,146,70,Bosnia Herzegovina,688,Serbia,Directed,483.129
+18,113,72,Botswana,516,Namibia,Directed,0.254
+18,155,72,Botswana,710,South Africa,Directed,1.174
+18,156,72,Botswana,716,Zimbabwe,Directed,0.114
+19,10,76,Brazil,44,Bahamas,Directed,127840.411
+19,32,76,Brazil,152,Chile,Directed,2.039162395e6
+19,33,76,Brazil,156,China,Directed,1.427723017e7
+19,35,76,Brazil,170,Colombia,Directed,0.13
+19,54,76,Brazil,251,France,Directed,70774.451
+19,59,76,Brazil,276,Germany,Directed,67082.304
+19,77,76,Brazil,376,Israel,Directed,133688.754
+19,78,76,Brazil,380,Italy,Directed,190349.861
+19,80,76,Brazil,388,Jamaica,Directed,101169.552
+19,81,76,Brazil,392,Japan,Directed,66415.282
+19,86,76,Brazil,410,Rep. of Korea,Directed,1.490664774e6
+19,96,76,Brazil,442,Luxembourg,Directed,12178.419
+19,99,76,Brazil,458,Malaysia,Directed,794704.432
+19,104,76,Brazil,484,Mexico,Directed,0.027
+19,116,76,Brazil,528,Netherlands,Directed,1.191260608e6
+19,119,76,Brazil,535,Bonaire,Directed,69264.148
+19,126,76,Brazil,579,Norway,Directed,113526.361
+19,130,76,Brazil,591,Panama,Directed,61337.046
+19,132,76,Brazil,600,Paraguay,Directed,0.434
+19,133,76,Brazil,604,Peru,Directed,733617.579
+19,136,76,Brazil,620,Portugal,Directed,1.696784094e6
+19,142,76,Brazil,662,Saint Lucia,Directed,179710.568
+19,149,76,Brazil,699,India,Directed,2.214935104e6
+19,150,76,Brazil,702,Singapore,Directed,1.037365756e6
+19,157,76,Brazil,724,Spain,Directed,1.072783338e6
+19,161,76,Brazil,752,Sweden,Directed,91260.707
+19,168,76,Brazil,784,United Arab Emirates,Directed,0.735
+19,177,76,Brazil,826,United Kingdom,Directed,0.01
+19,179,76,Brazil,842,USA,Directed,3.112098839e6
+20,66,84,Belize,320,Guatemala,Directed,544.778
+20,168,84,Belize,784,United Arab Emirates,Directed,1.408
+20,179,84,Belize,842,USA,Directed,3544.931
+22,8,96,Brunei Darussalam,36,Australia,Directed,630895.082
+22,33,96,Brunei Darussalam,156,China,Directed,34751.193
+22,54,96,Brunei Darussalam,251,France,Directed,0.302
+22,81,96,Brunei Darussalam,392,Japan,Directed,85196.168
+22,99,96,Brunei Darussalam,458,Malaysia,Directed,79154.84
+22,134,96,Brunei Darussalam,608,Philippines,Directed,35578.587
+22,149,96,Brunei Darussalam,699,India,Directed,460081.117
+22,150,96,Brunei Darussalam,702,Singapore,Directed,357737.556
+22,164,96,Brunei Darussalam,764,Thailand,Directed,409995.339
+23,116,100,Bulgaria,528,Netherlands,Directed,0.091
+23,168,100,Bulgaria,784,United Arab Emirates,Directed,0.815
+24,152,104,Myanmar,704,Viet Nam,Directed,14456.261
+26,140,112,Belarus,643,Russian Federation,Directed,0.022
+28,29,120,Cameroon,124,Canada,Directed,70228.435
+28,33,120,Cameroon,156,China,Directed,748769.617
+28,54,120,Cameroon,251,France,Directed,48343.343
+28,78,120,Cameroon,380,Italy,Directed,246513.647
+28,116,120,Cameroon,528,Netherlands,Directed,223256.569
+28,149,120,Cameroon,699,India,Directed,362957.892
+28,150,120,Cameroon,702,Singapore,Directed,33041.71
+28,157,120,Cameroon,724,Spain,Directed,166648.343
+28,179,120,Cameroon,842,USA,Directed,120610.447
+29,14,124,Canada,56,Belgium,Directed,42.718
+29,22,124,Canada,96,Brunei Darussalam,Directed,0.073
+29,32,124,Canada,152,Chile,Directed,196646.924
+29,33,124,Canada,156,China,Directed,263284.098
+29,43,124,Canada,203,Czechia,Directed,0.047
+29,54,124,Canada,251,France,Directed,203804.081
+29,55,124,Canada,262,Djibouti,Directed,176.396
+29,59,124,Canada,276,Germany,Directed,25765.284
+29,60,124,Canada,288,Ghana,Directed,0.209
+29,70,124,Canada,344,"China, Hong Kong SAR",Directed,112077.966
+29,71,124,Canada,348,Hungary,Directed,5797.769
+29,76,124,Canada,372,Ireland,Directed,162513.815
+29,78,124,Canada,380,Italy,Directed,60087.717
+29,86,124,Canada,410,Rep. of Korea,Directed,293534.711
+29,106,124,Canada,496,Mongolia,Directed,2.406
+29,113,124,Canada,516,Namibia,Directed,0.34
+29,116,124,Canada,528,Netherlands,Directed,210706.161
+29,140,124,Canada,643,Russian Federation,Directed,0.271
+29,143,124,Canada,666,Saint Pierre and Miquelon,Directed,0.121
+29,149,124,Canada,699,India,Directed,271226.702
+29,150,124,Canada,702,Singapore,Directed,3237.476
+29,157,124,Canada,724,Spain,Directed,656166.064
+29,161,124,Canada,752,Sweden,Directed,2.332
+29,162,124,Canada,757,Switzerland,Directed,26420.877
+29,168,124,Canada,784,United Arab Emirates,Directed,8.455
+29,177,124,Canada,826,United Kingdom,Directed,323453.928
+29,179,124,Canada,842,USA,Directed,7.9847663947e7
+30,168,144,Sri Lanka,784,United Arab Emirates,Directed,5.975
+31,33,148,Chad,156,China,Directed,190958.21
+31,54,148,Chad,251,France,Directed,192938.564
+31,59,148,Chad,276,Germany,Directed,1.054301031e6
+31,105,148,Chad,490,"Other Asia, nes",Directed,463925.986
+31,116,148,Chad,528,Netherlands,Directed,152135.932
+32,14,152,Chile,56,Belgium,Directed,0.043
+32,86,152,Chile,410,Rep. of Korea,Directed,0.009
+32,150,152,Chile,702,Singapore,Directed,0.045
+33,18,156,China,72,Botswana,Directed,0.365
+33,24,156,China,104,Myanmar,Directed,91065.589
+33,29,156,China,124,Canada,Directed,0.071
+33,39,156,China,188,Costa Rica,Directed,10.455
+33,54,156,China,251,France,Directed,0.015
+33,63,156,China,300,Greece,Directed,0.399
+33,73,156,China,360,Indonesia,Directed,0.364
+33,81,156,China,392,Japan,Directed,28293.388
+33,84,156,China,404,Kenya,Directed,0.604
+33,86,156,China,410,Rep. of Korea,Directed,56634.864
+33,89,156,China,418,Lao People's Dem. Rep.,Directed,3.066
+33,99,156,China,458,Malaysia,Directed,349474.242
+33,113,156,China,516,Namibia,Directed,0.018
+33,116,156,China,528,Netherlands,Directed,0.143
+33,122,156,China,554,New Zealand,Directed,28.827
+33,134,156,China,608,Philippines,Directed,0.683
+33,135,156,China,616,Poland,Directed,14.919
+33,149,156,China,699,India,Directed,47479.31
+33,150,156,China,702,Singapore,Directed,55008.491
+33,161,156,China,752,Sweden,Directed,1.632
+33,164,156,China,764,Thailand,Directed,0.267
+33,166,156,China,776,Tonga,Directed,0.208
+33,168,156,China,784,United Arab Emirates,Directed,55.635
+33,174,156,China,800,Uganda,Directed,1.6
+33,184,156,China,882,Samoa,Directed,0.101
+35,10,170,Colombia,44,Bahamas,Directed,61020.305
+35,14,170,Colombia,56,Belgium,Directed,0.355
+35,22,170,Colombia,96,Brunei Darussalam,Directed,132109.498
+35,29,170,Colombia,124,Canada,Directed,156705.587
+35,33,170,Colombia,156,China,Directed,2.682974589e6
+35,41,170,Colombia,192,Cuba,Directed,70189.905
+35,47,170,Colombia,218,Ecuador,Directed,106783.653
+35,59,170,Colombia,276,Germany,Directed,179343.488
+35,79,170,Colombia,384,CÃ´te d'Ivoire,Directed,107792.898
+35,80,170,Colombia,388,Jamaica,Directed,129281.225
+35,81,170,Colombia,392,Japan,Directed,6285.611
+35,86,170,Colombia,410,Rep. of Korea,Directed,64213.486
+35,116,170,Colombia,528,Netherlands,Directed,2.626
+35,130,170,Colombia,591,Panama,Directed,1.942604594e6
+35,133,170,Colombia,604,Peru,Directed,40680.82
+35,142,170,Colombia,662,Saint Lucia,Directed,245086.047
+35,149,170,Colombia,699,India,Directed,1.955755591e6
+35,157,170,Colombia,724,Spain,Directed,122194.67
+35,174,170,Colombia,800,Uganda,Directed,0.55
+35,179,170,Colombia,842,USA,Directed,3.366687042e6
+37,8,178,Congo,36,Australia,Directed,208317.347
+37,14,178,Congo,56,Belgium,Directed,0.113
+37,33,178,Congo,156,China,Directed,4.380691932e6
+37,54,178,Congo,251,France,Directed,3.578
+37,73,178,Congo,360,Indonesia,Directed,77837.551
+37,78,178,Congo,380,Italy,Directed,29485.148
+37,81,178,Congo,392,Japan,Directed,5424.752
+37,86,178,Congo,410,Rep. of Korea,Directed,324022.78
+37,99,178,Congo,458,Malaysia,Directed,54852.103
+37,105,178,Congo,490,"Other Asia, nes",Directed,120249.178
+37,126,178,Congo,579,Norway,Directed,55188.236
+37,149,178,Congo,699,India,Directed,670438.942
+37,150,178,Congo,702,Singapore,Directed,94688.468
+37,168,178,Congo,784,United Arab Emirates,Directed,60121.93
+37,179,178,Congo,842,USA,Directed,1114.311
+38,33,180,Dem. Rep. of the Congo,156,China,Directed,518481.646
+38,54,180,Dem. Rep. of the Congo,251,France,Directed,0.289
+38,73,180,Dem. Rep. of the Congo,360,Indonesia,Directed,23855.4
+38,116,180,Dem. Rep. of the Congo,528,Netherlands,Directed,0.088
+38,136,180,Dem. Rep. of the Congo,620,Portugal,Directed,128690.709
+38,168,180,Dem. Rep. of the Congo,784,United Arab Emirates,Directed,0.696
+40,23,191,Croatia,100,Bulgaria,Directed,97132.577
+40,71,191,Croatia,348,Hungary,Directed,891719.928
+40,126,191,Croatia,579,Norway,Directed,0.03
+40,164,191,Croatia,764,Thailand,Directed,0.082
+40,168,191,Croatia,784,United Arab Emirates,Directed,0.735
+40,170,191,Croatia,792,TÃ¼rkiye,Directed,0.03
+41,14,192,Cuba,56,Belgium,Directed,9465.625
+41,15,192,Cuba,60,Bermuda,Directed,48324.644
+41,61,192,Cuba,292,Gibraltar,Directed,23727.422
+42,23,196,Cyprus,100,Bulgaria,Directed,43182.415
+42,116,196,Cyprus,528,Netherlands,Directed,0.044
+43,9,203,Czechia,40,Austria,Directed,0.485
+43,14,203,Czechia,56,Belgium,Directed,34.452
+43,59,203,Czechia,276,Germany,Directed,1.818
+43,107,203,Czechia,498,Rep. of Moldova,Directed,1.252
+43,116,203,Czechia,528,Netherlands,Directed,0.329
+43,135,203,Czechia,616,Poland,Directed,0.166
+43,151,203,Czechia,703,Slovakia,Directed,14.97
+43,157,203,Czechia,724,Spain,Directed,0.025
+43,161,203,Czechia,752,Sweden,Directed,7.462
+43,168,203,Czechia,784,United Arab Emirates,Directed,3.452
+43,171,203,Czechia,795,Turkmenistan,Directed,0.025
+43,177,203,Czechia,826,United Kingdom,Directed,0.487
+43,179,203,Czechia,842,USA,Directed,0.176
+44,40,208,Denmark,191,Croatia,Directed,0.057
+44,53,208,Denmark,246,Finland,Directed,52380.369
+44,59,208,Denmark,276,Germany,Directed,19131.621
+44,64,208,Denmark,304,Greenland,Directed,8.071
+44,72,208,Denmark,352,Iceland,Directed,0.005
+44,76,208,Denmark,372,Ireland,Directed,23808.516
+44,78,208,Denmark,380,Italy,Directed,134762.054
+44,116,208,Denmark,528,Netherlands,Directed,98128.456
+44,126,208,Denmark,579,Norway,Directed,29951.979
+44,132,208,Denmark,600,Paraguay,Directed,0.378
+44,157,208,Denmark,724,Spain,Directed,23801.788
+44,161,208,Denmark,752,Sweden,Directed,27877.334
+44,177,208,Denmark,826,United Kingdom,Directed,815.242
+46,179,214,Dominican Rep.,842,USA,Directed,0.04
+47,29,218,Ecuador,124,Canada,Directed,43209.461
+47,32,218,Ecuador,152,Chile,Directed,719727.105
+47,33,218,Ecuador,156,China,Directed,477661.342
+47,35,218,Ecuador,170,Colombia,Directed,0.868
+47,79,218,Ecuador,384,CÃ´te d'Ivoire,Directed,73245.514
+47,80,218,Ecuador,388,Jamaica,Directed,20095.26
+47,81,218,Ecuador,392,Japan,Directed,999571.794
+47,86,218,Ecuador,410,Rep. of Korea,Directed,81767.147
+47,99,218,Ecuador,458,Malaysia,Directed,86425.775
+47,130,218,Ecuador,591,Panama,Directed,3.250527352e6
+47,133,218,Ecuador,604,Peru,Directed,149583.575
+47,149,218,Ecuador,699,India,Directed,596800.228
+47,168,218,Ecuador,784,United Arab Emirates,Directed,8.516
+47,177,218,Ecuador,826,United Kingdom,Directed,1.649
+47,179,218,Ecuador,842,USA,Directed,2.059376972e6
+48,66,222,El Salvador,320,Guatemala,Directed,0.027
+49,22,226,Equatorial Guinea,96,Brunei Darussalam,Directed,47581.384
+49,28,226,Equatorial Guinea,120,Cameroon,Directed,0.055
+49,33,226,Equatorial Guinea,156,China,Directed,868330.015
+49,54,226,Equatorial Guinea,251,France,Directed,124729.227
+49,73,226,Equatorial Guinea,360,Indonesia,Directed,149203.015
+49,78,226,Equatorial Guinea,380,Italy,Directed,112253.579
+49,86,226,Equatorial Guinea,410,Rep. of Korea,Directed,289870.62
+49,116,226,Equatorial Guinea,528,Netherlands,Directed,103820.366
+49,136,226,Equatorial Guinea,620,Portugal,Directed,127158.488
+49,149,226,Equatorial Guinea,699,India,Directed,689297.447
+49,150,226,Equatorial Guinea,702,Singapore,Directed,72759.836
+49,157,226,Equatorial Guinea,724,Spain,Directed,557117.296
+49,168,226,Equatorial Guinea,784,United Arab Emirates,Directed,38886.861
+51,44,233,Estonia,208,Denmark,Directed,10066.813
+51,53,233,Estonia,246,Finland,Directed,119.235
+51,92,233,Estonia,428,Latvia,Directed,395.031
+51,116,233,Estonia,528,Netherlands,Directed,4056.44
+51,140,233,Estonia,643,Russian Federation,Directed,0.022
+51,157,233,Estonia,724,Spain,Directed,14288.4
+51,168,233,Estonia,784,United Arab Emirates,Directed,0.735
+51,177,233,Estonia,826,United Kingdom,Directed,1084.56
+51,179,233,Estonia,842,USA,Directed,4481.756
+52,34,242,Fiji,162,Christmas Isds,Directed,26.788
+52,62,242,Fiji,296,Kiribati,Directed,305.533
+52,121,242,Fiji,548,Vanuatu,Directed,41.248
+52,122,242,Fiji,554,New Zealand,Directed,9.911
+52,127,242,Fiji,583,FS Micronesia,Directed,108.534
+52,128,242,Fiji,584,Marshall Isds,Directed,1891.275
+52,166,242,Fiji,776,Tonga,Directed,0.259
+52,173,242,Fiji,798,Tuvalu,Directed,134.797
+52,183,242,Fiji,876,Wallis and Futuna Isds,Directed,238.627
+53,51,246,Finland,233,Estonia,Directed,3.758
+53,116,246,Finland,528,Netherlands,Directed,5.126
+53,168,246,Finland,784,United Arab Emirates,Directed,0.002
+53,177,246,Finland,826,United Kingdom,Directed,0.682
+54,4,251,France,20,Andorra,Directed,0.835
+54,5,251,France,24,Angola,Directed,0.629
+54,9,251,France,40,Austria,Directed,1588.367
+54,14,251,France,56,Belgium,Directed,102808.497
+54,28,251,France,120,Cameroon,Directed,0.08
+54,29,251,France,124,Canada,Directed,0.048
+54,37,251,France,178,Congo,Directed,5.413
+54,38,251,France,180,Dem. Rep. of the Congo,Directed,0.022
+54,43,251,France,203,Czechia,Directed,20.886
+54,44,251,France,208,Denmark,Directed,0.045
+54,59,251,France,276,Germany,Directed,9155.074
+54,61,251,France,292,Gibraltar,Directed,8440.437
+54,78,251,France,380,Italy,Directed,4.284
+54,79,251,France,384,CÃ´te d'Ivoire,Directed,0.26
+54,81,251,France,392,Japan,Directed,1.481
+54,86,251,France,410,Rep. of Korea,Directed,0.355
+54,96,251,France,442,Luxembourg,Directed,1.2
+54,97,251,France,450,Madagascar,Directed,0.005
+54,110,251,France,504,Morocco,Directed,0.011
+54,116,251,France,528,Netherlands,Directed,0.369
+54,144,251,France,682,Saudi Arabia,Directed,2.824
+54,145,251,France,686,Senegal,Directed,0.084
+54,150,251,France,702,Singapore,Directed,0.074
+54,151,251,France,703,Slovakia,Directed,0.152
+54,155,251,France,710,South Africa,Directed,0.292
+54,157,251,France,724,Spain,Directed,3.91
+54,162,251,France,757,Switzerland,Directed,0.51
+54,168,251,France,784,United Arab Emirates,Directed,11.425
+54,169,251,France,788,Tunisia,Directed,0.259
+54,177,251,France,826,United Kingdom,Directed,2787.304
+54,179,251,France,842,USA,Directed,2.383
+56,8,266,Gabon,36,Australia,Directed,128002.699
+56,33,266,Gabon,156,China,Directed,1.379430251e6
+56,54,266,Gabon,251,France,Directed,46775.609
+56,57,266,Gabon,268,Georgia,Directed,45349.78
+56,59,266,Gabon,276,Germany,Directed,0.005
+56,73,266,Gabon,360,Indonesia,Directed,297432.505
+56,78,266,Gabon,380,Italy,Directed,119366.673
+56,86,266,Gabon,410,Rep. of Korea,Directed,550922.379
+56,99,266,Gabon,458,Malaysia,Directed,183914.06
+56,105,266,Gabon,490,"Other Asia, nes",Directed,0.005
+56,116,266,Gabon,528,Netherlands,Directed,193919.407
+56,149,266,Gabon,699,India,Directed,636892.768
+56,150,266,Gabon,702,Singapore,Directed,132926.626
+56,155,266,Gabon,710,South Africa,Directed,0.01
+56,157,266,Gabon,724,Spain,Directed,187641.758
+56,164,266,Gabon,764,Thailand,Directed,55032.89
+56,168,266,Gabon,784,United Arab Emirates,Directed,0.039
+56,170,266,Gabon,792,TÃ¼rkiye,Directed,0.018
+56,172,266,Gabon,796,Turks and Caicos Isds,Directed,0.009
+56,177,266,Gabon,826,United Kingdom,Directed,45520.902
+56,179,266,Gabon,842,USA,Directed,3.293
+57,116,268,Georgia,528,Netherlands,Directed,0.041
+57,139,268,Georgia,642,Romania,Directed,40252.092
+57,181,268,Georgia,860,Uzbekistan,Directed,0.25
+59,9,276,Germany,40,Austria,Directed,323.029
+59,14,276,Germany,56,Belgium,Directed,426.673
+59,16,276,Germany,68,Bolivia (Plurinational State of),Directed,0.048
+59,19,276,Germany,76,Brazil,Directed,0.038
+59,29,276,Germany,124,Canada,Directed,0.324
+59,30,276,Germany,144,Sri Lanka,Directed,0.156
+59,43,276,Germany,203,Czechia,Directed,1.139
+59,44,276,Germany,208,Denmark,Directed,0.378
+59,51,276,Germany,233,Estonia,Directed,0.177
+59,53,276,Germany,246,Finland,Directed,0.143
+59,54,276,Germany,251,France,Directed,22.551
+59,72,276,Germany,352,Iceland,Directed,0.132
+59,76,276,Germany,372,Ireland,Directed,2.429
+59,78,276,Germany,380,Italy,Directed,11078.264
+59,90,276,Germany,422,Lebanon,Directed,33.156
+59,96,276,Germany,442,Luxembourg,Directed,27.316
+59,116,276,Germany,528,Netherlands,Directed,226412.891
+59,129,276,Germany,586,Pakistan,Directed,0.349
+59,150,276,Germany,702,Singapore,Directed,1.341
+59,151,276,Germany,703,Slovakia,Directed,0.499
+59,157,276,Germany,724,Spain,Directed,2779.916
+59,161,276,Germany,752,Sweden,Directed,8.278
+59,168,276,Germany,784,United Arab Emirates,Directed,46.87
+59,169,276,Germany,788,Tunisia,Directed,0.129
+59,177,276,Germany,826,United Kingdom,Directed,9.536
+60,8,288,Ghana,36,Australia,Directed,60821.61
+60,29,288,Ghana,124,Canada,Directed,798329.701
+60,33,288,Ghana,156,China,Directed,997264.575
+60,78,288,Ghana,380,Italy,Directed,129162.135
+60,99,288,Ghana,458,Malaysia,Directed,145255.303
+60,116,288,Ghana,528,Netherlands,Directed,62163.988
+60,149,288,Ghana,699,India,Directed,282076.08
+60,150,288,Ghana,702,Singapore,Directed,141329.871
+60,155,288,Ghana,710,South Africa,Directed,525476.764
+60,157,288,Ghana,724,Spain,Directed,146616.534
+60,164,288,Ghana,764,Thailand,Directed,195962.557
+60,179,288,Ghana,842,USA,Directed,1.361495992e6
+60,180,288,Ghana,858,Uruguay,Directed,62395.672
+61,14,292,Gibraltar,56,Belgium,Directed,0.01
+61,116,292,Gibraltar,528,Netherlands,Directed,0.001
+63,22,300,Greece,96,Brunei Darussalam,Directed,119233.88
+63,23,300,Greece,100,Bulgaria,Directed,241432.637
+63,54,300,Greece,251,France,Directed,1.09
+63,116,300,Greece,528,Netherlands,Directed,0.136
+63,126,300,Greece,579,Norway,Directed,0.38
+63,157,300,Greece,724,Spain,Directed,7641.096
+63,170,300,Greece,792,TÃ¼rkiye,Directed,24030.117
+63,179,300,Greece,842,USA,Directed,0.001
+65,150,316,Guam,702,Singapore,Directed,0.02
+66,179,320,Guatemala,842,USA,Directed,72979.178
+68,9,328,Guyana,40,Austria,Directed,54338.56
+68,14,328,Guyana,56,Belgium,Directed,0.029
+68,29,328,Guyana,124,Canada,Directed,0.077
+68,33,328,Guyana,156,China,Directed,295713.855
+68,59,328,Guyana,276,Germany,Directed,12374.145
+68,116,328,Guyana,528,Netherlands,Directed,78861.416
+68,130,328,Guyana,591,Panama,Directed,827351.892
+68,149,328,Guyana,699,India,Directed,146820.944
+68,150,328,Guyana,702,Singapore,Directed,2.019227308e6
+68,157,328,Guyana,724,Spain,Directed,76326.716
+68,177,328,Guyana,826,United Kingdom,Directed,497914.653
+68,179,328,Guyana,842,USA,Directed,2.163489314e6
+69,116,340,Honduras,528,Netherlands,Directed,0.037
+70,43,344,"China, Hong Kong SAR",203,Czechia,Directed,0.011
+70,86,344,"China, Hong Kong SAR",410,Rep. of Korea,Directed,0.528
+70,116,344,"China, Hong Kong SAR",528,Netherlands,Directed,0.199
+70,150,344,"China, Hong Kong SAR",702,Singapore,Directed,0.001
+71,17,348,Hungary,70,Bosnia Herzegovina,Directed,13.967
+71,40,348,Hungary,191,Croatia,Directed,40942.51
+71,116,348,Hungary,528,Netherlands,Directed,5.991
+71,146,348,Hungary,688,Serbia,Directed,50.474
+71,151,348,Hungary,703,Slovakia,Directed,111945.765
+71,168,348,Hungary,784,United Arab Emirates,Directed,6.729
+72,116,352,Iceland,528,Netherlands,Directed,0.035
+73,8,360,Indonesia,36,Australia,Directed,266441.327
+73,33,360,Indonesia,156,China,Directed,468293.092
+73,81,360,Indonesia,392,Japan,Directed,77005.958
+73,86,360,Indonesia,410,Rep. of Korea,Directed,32058.615
+73,99,360,Indonesia,458,Malaysia,Directed,192122.098
+73,105,360,Indonesia,490,"Other Asia, nes",Directed,37793.807
+73,116,360,Indonesia,528,Netherlands,Directed,0.342
+73,149,360,Indonesia,699,India,Directed,264766.765
+73,150,360,Indonesia,702,Singapore,Directed,295110.407
+73,152,360,Indonesia,704,Viet Nam,Directed,74231.211
+73,164,360,Indonesia,764,Thailand,Directed,1.299594206e6
+73,168,360,Indonesia,784,United Arab Emirates,Directed,0.75
+73,179,360,Indonesia,842,USA,Directed,10670.686
+74,1,364,Iran,4,Afghanistan,Directed,3422.722
+74,33,364,Iran,156,China,Directed,2.470066476e6
+74,75,364,Iran,368,Iraq,Directed,113.514
+74,105,364,Iran,490,"Other Asia, nes",Directed,1.078455766e7
+74,168,364,Iran,784,United Arab Emirates,Directed,1881.538
+75,9,368,Iraq,40,Austria,Directed,801091.727
+75,19,368,Iraq,76,Brazil,Directed,314840.825
+75,22,368,Iraq,96,Brunei Darussalam,Directed,61543.237
+75,33,368,Iraq,156,China,Directed,2.6471616967e7
+75,54,368,Iraq,251,France,Directed,1.060936654e6
+75,59,368,Iraq,276,Germany,Directed,1.094892051e6
+75,63,368,Iraq,300,Greece,Directed,4.87756863e6
+75,78,368,Iraq,380,Italy,Directed,3.96806675e6
+75,81,368,Iraq,392,Japan,Directed,179683.052
+75,83,368,Iraq,400,Jordan,Directed,74560.779
+75,86,368,Iraq,410,Rep. of Korea,Directed,4.011922689e6
+75,93,368,Iraq,430,Liberia,Directed,117.884
+75,99,368,Iraq,458,Malaysia,Directed,121014.857
+75,105,368,Iraq,490,"Other Asia, nes",Directed,837142.447
+75,116,368,Iraq,528,Netherlands,Directed,485587.17
+75,134,368,Iraq,608,Philippines,Directed,37666.038
+75,135,368,Iraq,616,Poland,Directed,78168.736
+75,146,368,Iraq,688,Serbia,Directed,755000.428
+75,149,368,Iraq,699,India,Directed,2.5052208649e7
+75,150,368,Iraq,702,Singapore,Directed,350643.711
+75,157,368,Iraq,724,Spain,Directed,1.788185126e6
+75,161,368,Iraq,752,Sweden,Directed,0.35
+75,168,368,Iraq,784,United Arab Emirates,Directed,6736.903
+75,179,368,Iraq,842,USA,Directed,3.77297037e6
+76,61,372,Ireland,292,Gibraltar,Directed,34074.3
+76,78,372,Ireland,380,Italy,Directed,34102.472
+76,116,372,Ireland,528,Netherlands,Directed,0.004
+76,125,372,Ireland,566,Nigeria,Directed,0.005
+76,177,372,Ireland,826,United Kingdom,Directed,2224.932
+76,179,372,Ireland,842,USA,Directed,9.171
+77,8,376,Israel,36,Australia,Directed,4.298
+77,14,376,Israel,56,Belgium,Directed,0.212
+77,18,376,Israel,72,Botswana,Directed,0.01
+77,23,376,Israel,100,Bulgaria,Directed,147779.507
+77,48,376,Israel,222,El Salvador,Directed,0.601
+77,63,376,Israel,300,Greece,Directed,0.148
+77,78,376,Israel,380,Italy,Directed,19181.937
+77,116,376,Israel,528,Netherlands,Directed,0.025
+77,135,376,Israel,616,Poland,Directed,0.59
+77,139,376,Israel,642,Romania,Directed,0.32
+77,149,376,Israel,699,India,Directed,114436.063
+78,9,380,Italy,40,Austria,Directed,0.271
+78,14,380,Italy,56,Belgium,Directed,2.085
+78,40,380,Italy,191,Croatia,Directed,1310.369
+78,43,380,Italy,203,Czechia,Directed,3.678
+78,54,380,Italy,251,France,Directed,34850.313
+78,59,380,Italy,276,Germany,Directed,20670.09
+78,71,380,Italy,348,Hungary,Directed,1097.866
+78,101,380,Italy,470,Malta,Directed,21304.391
+78,116,380,Italy,528,Netherlands,Directed,26658.457
+78,145,380,Italy,686,Senegal,Directed,27.099
+78,149,380,Italy,699,India,Directed,13286.143
+78,151,380,Italy,703,Slovakia,Directed,288.484
+78,153,380,Italy,705,Slovenia,Directed,0.045
+78,157,380,Italy,724,Spain,Directed,602223.998
+78,168,380,Italy,784,United Arab Emirates,Directed,60.78
+78,170,380,Italy,792,TÃ¼rkiye,Directed,64696.226
+78,178,380,Italy,834,United Rep. of Tanzania,Directed,0.024
+79,33,384,CÃ´te d'Ivoire,156,China,Directed,133278.671
+79,54,384,CÃ´te d'Ivoire,251,France,Directed,85424.166
+79,59,384,CÃ´te d'Ivoire,276,Germany,Directed,7279.078
+79,78,384,CÃ´te d'Ivoire,380,Italy,Directed,32219.215
+79,126,384,CÃ´te d'Ivoire,579,Norway,Directed,0.63
+79,145,384,CÃ´te d'Ivoire,686,Senegal,Directed,0.006
+79,149,384,CÃ´te d'Ivoire,699,India,Directed,52259.459
+79,150,384,CÃ´te d'Ivoire,702,Singapore,Directed,0.007
+79,155,384,CÃ´te d'Ivoire,710,South Africa,Directed,32741.252
+79,162,384,CÃ´te d'Ivoire,757,Switzerland,Directed,8415.083
+79,168,384,CÃ´te d'Ivoire,784,United Arab Emirates,Directed,45823.646
+79,177,384,CÃ´te d'Ivoire,826,United Kingdom,Directed,192910.393
+80,13,388,Jamaica,52,Barbados,Directed,1974.014
+81,14,392,Japan,56,Belgium,Directed,0.162
+81,19,392,Japan,76,Brazil,Directed,4.02
+81,22,392,Japan,96,Brunei Darussalam,Directed,183297.202
+81,29,392,Japan,124,Canada,Directed,0.06
+81,43,392,Japan,203,Czechia,Directed,0.037
+81,89,392,Japan,418,Lao People's Dem. Rep.,Directed,0.406
+81,99,392,Japan,458,Malaysia,Directed,110.164
+81,113,392,Japan,516,Namibia,Directed,0.118
+81,116,392,Japan,528,Netherlands,Directed,0.098
+81,134,392,Japan,608,Philippines,Directed,0.403
+81,149,392,Japan,699,India,Directed,71611.926
+81,150,392,Japan,702,Singapore,Directed,107.969
+81,168,392,Japan,784,United Arab Emirates,Directed,3.665
+82,9,398,Kazakhstan,40,Austria,Directed,1.609493034e6
+82,22,398,Kazakhstan,96,Brunei Darussalam,Directed,887258.918
+82,23,398,Kazakhstan,100,Bulgaria,Directed,286787.976
+82,33,398,Kazakhstan,156,China,Directed,1.860396851e6
+82,40,398,Kazakhstan,191,Croatia,Directed,40721.362
+82,43,398,Kazakhstan,203,Czechia,Directed,665426.663
+82,53,398,Kazakhstan,246,Finland,Directed,151878.779
+82,54,398,Kazakhstan,251,France,Directed,2.088834796e6
+82,59,398,Kazakhstan,276,Germany,Directed,73030.626
+82,63,398,Kazakhstan,300,Greece,Directed,2.478999088e6
+82,71,398,Kazakhstan,348,Hungary,Directed,240962.565
+82,77,398,Kazakhstan,376,Israel,Directed,200726.287
+82,78,398,Kazakhstan,380,Italy,Directed,8.260975039e6
+82,81,398,Kazakhstan,392,Japan,Directed,74673.888
+82,86,398,Kazakhstan,410,Rep. of Korea,Directed,1.706200374e6
+82,88,398,Kazakhstan,417,Kyrgyzstan,Directed,336.038
+82,95,398,Kazakhstan,440,Lithuania,Directed,1.225294694e6
+82,101,398,Kazakhstan,470,Malta,Directed,275006.48
+82,116,398,Kazakhstan,528,Netherlands,Directed,3.732852276e6
+82,135,398,Kazakhstan,616,Poland,Directed,201122.065
+82,139,398,Kazakhstan,642,Romania,Directed,1.354035438e6
+82,140,398,Kazakhstan,643,Russian Federation,Directed,25758.792
+82,146,398,Kazakhstan,688,Serbia,Directed,204516.052
+82,149,398,Kazakhstan,699,India,Directed,1.527662858e6
+82,150,398,Kazakhstan,702,Singapore,Directed,1.110567865e6
+82,151,398,Kazakhstan,703,Slovakia,Directed,34595.79
+82,157,398,Kazakhstan,724,Spain,Directed,1.563633456e6
+82,162,398,Kazakhstan,757,Switzerland,Directed,33775.118
+82,168,398,Kazakhstan,784,United Arab Emirates,Directed,67249.434
+82,170,398,Kazakhstan,792,TÃ¼rkiye,Directed,1.668300999e6
+82,179,398,Kazakhstan,842,USA,Directed,468964.352
+82,181,398,Kazakhstan,860,Uzbekistan,Directed,70989.078
+83,116,400,Jordan,528,Netherlands,Directed,0.112
+83,168,400,Jordan,784,United Arab Emirates,Directed,0.621
+84,59,404,Kenya,276,Germany,Directed,0.251
+84,116,404,Kenya,528,Netherlands,Directed,0.089
+84,168,404,Kenya,784,United Arab Emirates,Directed,0.004
+84,174,404,Kenya,800,Uganda,Directed,13.682
+84,177,404,Kenya,826,United Kingdom,Directed,0.059
+86,8,410,Rep. of Korea,36,Australia,Directed,9785.476
+86,14,410,Rep. of Korea,56,Belgium,Directed,0.254
+86,22,410,Rep. of Korea,96,Brunei Darussalam,Directed,113593.996
+86,66,410,Rep. of Korea,320,Guatemala,Directed,352.752
+86,77,410,Rep. of Korea,376,Israel,Directed,0.009
+86,116,410,Rep. of Korea,528,Netherlands,Directed,0.422
+86,134,410,Rep. of Korea,608,Philippines,Directed,49264.151
+86,149,410,Rep. of Korea,699,India,Directed,44396.471
+86,150,410,Rep. of Korea,702,Singapore,Directed,0.766
+86,164,410,Rep. of Korea,764,Thailand,Directed,0.051
+86,168,410,Rep. of Korea,784,United Arab Emirates,Directed,4.291
+87,29,414,Kuwait,124,Canada,Directed,0.014
+87,33,414,Kuwait,156,China,Directed,1.5312267019e7
+87,81,414,Kuwait,392,Japan,Directed,5.367514566e6
+87,86,414,Kuwait,410,Rep. of Korea,Directed,7.232649964e6
+87,99,414,Kuwait,458,Malaysia,Directed,74572.437
+87,105,414,Kuwait,490,"Other Asia, nes",Directed,4.285612503e6
+87,112,414,Kuwait,512,Oman,Directed,20485.99
+87,116,414,Kuwait,528,Netherlands,Directed,0.881
+87,122,414,Kuwait,554,New Zealand,Directed,45828.644
+87,129,414,Kuwait,586,Pakistan,Directed,295346.698
+87,149,414,Kuwait,699,India,Directed,6.840379268e6
+87,150,414,Kuwait,702,Singapore,Directed,220645.001
+87,152,414,Kuwait,704,Viet Nam,Directed,4.504811233e6
+87,164,414,Kuwait,764,Thailand,Directed,220322.404
+87,168,414,Kuwait,784,United Arab Emirates,Directed,78.101
+87,179,414,Kuwait,842,USA,Directed,540344.228
+88,163,417,Kyrgyzstan,762,Tajikistan,Directed,473.333
+88,181,417,Kyrgyzstan,860,Uzbekistan,Directed,1541.446
+89,164,418,Lao People's Dem. Rep.,764,Thailand,Directed,0.05
+90,168,422,Lebanon,784,United Arab Emirates,Directed,3.276
+91,155,426,Lesotho,710,South Africa,Directed,0.338
+92,51,428,Latvia,233,Estonia,Directed,1242.093
+92,95,428,Latvia,440,Lithuania,Directed,479.415
+92,116,428,Latvia,528,Netherlands,Directed,0.026
+92,175,428,Latvia,804,Ukraine,Directed,837.736
+93,99,430,Liberia,458,Malaysia,Directed,3766.0
+93,116,430,Liberia,528,Netherlands,Directed,0.171
+93,149,430,Liberia,699,India,Directed,700.0
+94,8,434,Libya,36,Australia,Directed,273670.249
+94,9,434,Libya,40,Austria,Directed,891731.077
+94,14,434,Libya,56,Belgium,Directed,1003.015
+94,23,434,Libya,100,Bulgaria,Directed,53264.203
+94,33,434,Libya,156,China,Directed,3.27100626e6
+94,40,434,Libya,191,Croatia,Directed,20416.63
+94,41,434,Libya,192,Cuba,Directed,48104.569
+94,43,434,Libya,203,Czechia,Directed,89486.601
+94,44,434,Libya,208,Denmark,Directed,226546.12
+94,51,434,Libya,233,Estonia,Directed,31454.663
+94,54,434,Libya,251,France,Directed,2.088422748e6
+94,59,434,Libya,276,Germany,Directed,3.630095649e6
+94,63,434,Libya,300,Greece,Directed,1.011746816e6
+94,71,434,Libya,348,Hungary,Directed,17067.576
+94,78,434,Libya,380,Italy,Directed,5.523669874e6
+94,81,434,Libya,392,Japan,Directed,33881.222
+94,99,434,Libya,458,Malaysia,Directed,29594.149
+94,116,434,Libya,528,Netherlands,Directed,1.539554127e6
+94,149,434,Libya,699,India,Directed,302705.761
+94,150,434,Libya,702,Singapore,Directed,160172.905
+94,157,434,Libya,724,Spain,Directed,3.287520931e6
+94,161,434,Libya,752,Sweden,Directed,318920.266
+94,162,434,Libya,757,Switzerland,Directed,301729.892
+94,164,434,Libya,764,Thailand,Directed,1.052900563e6
+94,168,434,Libya,784,United Arab Emirates,Directed,816350.989
+94,169,434,Libya,788,Tunisia,Directed,0.202
+94,175,434,Libya,804,Ukraine,Directed,85850.556
+94,177,434,Libya,826,United Kingdom,Directed,1.547457919e6
+94,179,434,Libya,842,USA,Directed,2.18626663e6
+95,92,440,Lithuania,428,Latvia,Directed,387.216
+95,116,440,Lithuania,528,Netherlands,Directed,0.089
+95,135,440,Lithuania,616,Poland,Directed,13126.19
+95,157,440,Lithuania,724,Spain,Directed,35118.815
+96,116,442,Luxembourg,528,Netherlands,Directed,0.608
+96,179,442,Luxembourg,842,USA,Directed,0.027
+98,168,454,Malawi,784,United Arab Emirates,Directed,0.735
+99,8,458,Malaysia,36,Australia,Directed,2.233936942e6
+99,22,458,Malaysia,96,Brunei Darussalam,Directed,950499.543
+99,29,458,Malaysia,124,Canada,Directed,0.004
+99,33,458,Malaysia,156,China,Directed,8.953461389e6
+99,44,458,Malaysia,208,Denmark,Directed,0.001
+99,73,458,Malaysia,360,Indonesia,Directed,275585.147
+99,81,458,Malaysia,392,Japan,Directed,187563.715
+99,86,458,Malaysia,410,Rep. of Korea,Directed,19617.579
+99,89,458,Malaysia,418,Lao People's Dem. Rep.,Directed,0.32
+99,116,458,Malaysia,528,Netherlands,Directed,0.124
+99,122,458,Malaysia,554,New Zealand,Directed,147437.292
+99,129,458,Malaysia,586,Pakistan,Directed,39420.252
+99,131,458,Malaysia,598,Papua New Guinea,Directed,16369.386
+99,134,458,Malaysia,608,Philippines,Directed,154347.927
+99,149,458,Malaysia,699,India,Directed,963655.245
+99,150,458,Malaysia,702,Singapore,Directed,321191.206
+99,164,458,Malaysia,764,Thailand,Directed,1.076495566e6
+99,168,458,Malaysia,784,United Arab Emirates,Directed,2.317
+101,116,470,Malta,528,Netherlands,Directed,0.047
+101,168,470,Malta,784,United Arab Emirates,Directed,87801.931
+101,179,470,Malta,842,USA,Directed,0.05
+102,157,478,Mauritania,724,Spain,Directed,0.309
+103,14,480,Mauritius,56,Belgium,Directed,0.001
+104,33,484,Mexico,156,China,Directed,171879.435
+104,81,484,Mexico,392,Japan,Directed,54166.755
+104,86,484,Mexico,410,Rep. of Korea,Directed,3.312312488e6
+104,105,484,Mexico,490,"Other Asia, nes",Directed,7.17531889e6
+104,116,484,Mexico,528,Netherlands,Directed,0.099
+104,149,484,Mexico,699,India,Directed,3.34405732e6
+104,157,484,Mexico,724,Spain,Directed,3.386781963e6
+104,168,484,Mexico,784,United Arab Emirates,Directed,10.186
+104,179,484,Mexico,842,USA,Directed,1.3239863274e7
+105,86,490,"Other Asia, nes",410,Rep. of Korea,Directed,0.008
+105,116,490,"Other Asia, nes",528,Netherlands,Directed,0.096
+105,150,490,"Other Asia, nes",702,Singapore,Directed,0.01
+105,164,490,"Other Asia, nes",764,Thailand,Directed,0.364
+105,168,490,"Other Asia, nes",784,United Arab Emirates,Directed,1.536
+106,33,496,Mongolia,156,China,Directed,273421.89
+107,139,498,Rep. of Moldova,642,Romania,Directed,1412.707
+107,144,498,Rep. of Moldova,682,Saudi Arabia,Directed,74.176
+108,116,499,Montenegro,528,Netherlands,Directed,0.038
+110,14,504,Morocco,56,Belgium,Directed,0.053
+110,168,504,Morocco,784,United Arab Emirates,Directed,0.701
+111,78,508,Mozambique,380,Italy,Directed,3.417
+111,81,508,Mozambique,392,Japan,Directed,20565.066
+111,150,508,Mozambique,702,Singapore,Directed,7452.194
+112,14,512,Oman,56,Belgium,Directed,0.023
+112,33,512,Oman,156,China,Directed,2.2461560711e7
+112,81,512,Oman,392,Japan,Directed,313527.233
+112,86,512,Oman,410,Rep. of Korea,Directed,475153.049
+112,99,512,Oman,458,Malaysia,Directed,115718.515
+112,105,512,Oman,490,"Other Asia, nes",Directed,1.094538794e6
+112,116,512,Oman,528,Netherlands,Directed,1.512
+112,134,512,Oman,608,Philippines,Directed,69276.82
+112,138,512,Oman,634,Qatar,Directed,21.134
+112,149,512,Oman,699,India,Directed,2.826708246e6
+112,150,512,Oman,702,Singapore,Directed,137476.599
+112,161,512,Oman,752,Sweden,Directed,0.583
+112,164,512,Oman,764,Thailand,Directed,84678.506
+112,168,512,Oman,784,United Arab Emirates,Directed,11.933
+113,5,516,Namibia,24,Angola,Directed,4.891
+113,14,516,Namibia,56,Belgium,Directed,0.001
+113,38,516,Namibia,180,Dem. Rep. of the Congo,Directed,169.46
+113,63,516,Namibia,300,Greece,Directed,0.915
+113,78,516,Namibia,380,Italy,Directed,0.001
+113,98,516,Namibia,454,Malawi,Directed,2.708
+113,116,516,Namibia,528,Netherlands,Directed,2.814
+113,126,516,Namibia,579,Norway,Directed,0.04
+113,150,516,Namibia,702,Singapore,Directed,1.445
+113,154,516,Namibia,706,Somalia,Directed,2.708
+113,155,516,Namibia,710,South Africa,Directed,0.018
+113,157,516,Namibia,724,Spain,Directed,0.128
+113,168,516,Namibia,784,United Arab Emirates,Directed,0.014
+113,177,516,Namibia,826,United Kingdom,Directed,0.277
+113,179,516,Namibia,842,USA,Directed,0.006
+113,186,516,Namibia,894,Zambia,Directed,56.51
+116,8,528,Netherlands,36,Australia,Directed,0.002
+116,9,528,Netherlands,40,Austria,Directed,0.001
+116,14,528,Netherlands,56,Belgium,Directed,1.7002703122e7
+116,22,528,Netherlands,96,Brunei Darussalam,Directed,44540.149
+116,32,528,Netherlands,152,Chile,Directed,0.878
+116,33,528,Netherlands,156,China,Directed,46662.32
+116,35,528,Netherlands,170,Colombia,Directed,0.541
+116,40,528,Netherlands,191,Croatia,Directed,0.001
+116,42,528,Netherlands,196,Cyprus,Directed,0.005
+116,44,528,Netherlands,208,Denmark,Directed,16.238
+116,47,528,Netherlands,218,Ecuador,Directed,0.009
+116,49,528,Netherlands,226,Equatorial Guinea,Directed,0.375
+116,51,528,Netherlands,233,Estonia,Directed,0.012
+116,53,528,Netherlands,246,Finland,Directed,15.11
+116,54,528,Netherlands,251,France,Directed,518.402
+116,59,528,Netherlands,276,Germany,Directed,5.002407155e6
+116,63,528,Netherlands,300,Greece,Directed,3.729
+116,76,528,Netherlands,372,Ireland,Directed,0.001
+116,78,528,Netherlands,380,Italy,Directed,36844.962
+116,82,528,Netherlands,398,Kazakhstan,Directed,1.591
+116,92,528,Netherlands,428,Latvia,Directed,0.006
+116,99,528,Netherlands,458,Malaysia,Directed,0.007
+116,101,528,Netherlands,470,Malta,Directed,0.012
+116,126,528,Netherlands,579,Norway,Directed,36.006
+116,129,528,Netherlands,586,Pakistan,Directed,0.637
+116,135,528,Netherlands,616,Poland,Directed,13.333
+116,136,528,Netherlands,620,Portugal,Directed,0.193
+116,139,528,Netherlands,642,Romania,Directed,0.006
+116,145,528,Netherlands,686,Senegal,Directed,3517.143
+116,149,528,Netherlands,699,India,Directed,0.006
+116,150,528,Netherlands,702,Singapore,Directed,0.053
+116,151,528,Netherlands,703,Slovakia,Directed,0.095
+116,152,528,Netherlands,704,Viet Nam,Directed,0.001
+116,157,528,Netherlands,724,Spain,Directed,102628.233
+116,161,528,Netherlands,752,Sweden,Directed,0.871
+116,162,528,Netherlands,757,Switzerland,Directed,3.17
+116,168,528,Netherlands,784,United Arab Emirates,Directed,46135.928
+116,177,528,Netherlands,826,United Kingdom,Directed,13201.249
+116,179,528,Netherlands,842,USA,Directed,1.514
+117,116,531,CuraÃ§ao,528,Netherlands,Directed,31494.233
+118,86,533,Aruba,410,Rep. of Korea,Directed,92987.735
+118,168,533,Aruba,784,United Arab Emirates,Directed,0.354
+122,8,554,New Zealand,36,Australia,Directed,299926.687
+122,86,554,New Zealand,410,Rep. of Korea,Directed,12386.246
+122,150,554,New Zealand,702,Singapore,Directed,11679.943
+122,164,554,New Zealand,764,Thailand,Directed,13207.778
+122,166,554,New Zealand,776,Tonga,Directed,0.043
+122,168,554,New Zealand,784,United Arab Emirates,Directed,0.708
+122,179,554,New Zealand,842,USA,Directed,60086.589
+124,33,562,Niger,156,China,Directed,0.1
+125,8,566,Nigeria,36,Australia,Directed,80156.915
+125,14,566,Nigeria,56,Belgium,Directed,66142.925
+125,19,566,Nigeria,76,Brazil,Directed,600174.185
+125,22,566,Nigeria,96,Brunei Darussalam,Directed,100048.021
+125,29,566,Nigeria,124,Canada,Directed,1.599360997e6
+125,32,566,Nigeria,152,Chile,Directed,63541.921
+125,33,566,Nigeria,156,China,Directed,1.144507106e6
+125,40,566,Nigeria,191,Croatia,Directed,89905.9
+125,43,566,Nigeria,203,Czechia,Directed,13696.586
+125,44,566,Nigeria,208,Denmark,Directed,232106.897
+125,54,566,Nigeria,251,France,Directed,2.563515251e6
+125,59,566,Nigeria,276,Germany,Directed,1.141514514e6
+125,63,566,Nigeria,300,Greece,Directed,45900.17
+125,73,566,Nigeria,360,Indonesia,Directed,1.93978753e6
+125,76,566,Nigeria,372,Ireland,Directed,0.012
+125,78,566,Nigeria,380,Italy,Directed,1.734980099e6
+125,79,566,Nigeria,384,CÃ´te d'Ivoire,Directed,1.180187637e6
+125,86,566,Nigeria,410,Rep. of Korea,Directed,517835.315
+125,99,566,Nigeria,458,Malaysia,Directed,21172.111
+125,105,566,Nigeria,490,"Other Asia, nes",Directed,206866.728
+125,116,566,Nigeria,528,Netherlands,Directed,2.379399846e6
+125,126,566,Nigeria,579,Norway,Directed,20017.926
+125,133,566,Nigeria,604,Peru,Directed,269755.242
+125,135,566,Nigeria,616,Poland,Directed,896220.34
+125,136,566,Nigeria,620,Portugal,Directed,1.053289348e6
+125,145,566,Nigeria,686,Senegal,Directed,509738.679
+125,149,566,Nigeria,699,India,Directed,8.188377891e6
+125,150,566,Nigeria,702,Singapore,Directed,834158.132
+125,152,566,Nigeria,704,Viet Nam,Directed,91163.611
+125,155,566,Nigeria,710,South Africa,Directed,2.174291912e6
+125,157,566,Nigeria,724,Spain,Directed,5.399201065e6
+125,161,566,Nigeria,752,Sweden,Directed,430521.447
+125,162,566,Nigeria,757,Switzerland,Directed,471272.654
+125,164,566,Nigeria,764,Thailand,Directed,539176.959
+125,168,566,Nigeria,784,United Arab Emirates,Directed,58983.936
+125,177,566,Nigeria,826,United Kingdom,Directed,1.190299104e6
+125,179,566,Nigeria,842,USA,Directed,2.872777623e6
+125,180,566,Nigeria,858,Uruguay,Directed,396321.411
+126,5,579,Norway,24,Angola,Directed,0.848
+126,9,579,Norway,40,Austria,Directed,23616.636
+126,14,579,Norway,56,Belgium,Directed,5661.148
+126,22,579,Norway,96,Brunei Darussalam,Directed,286492.126
+126,29,579,Norway,124,Canada,Directed,303607.962
+126,33,579,Norway,156,China,Directed,6.450658087e6
+126,40,579,Norway,191,Croatia,Directed,44698.309
+126,43,579,Norway,203,Czechia,Directed,52114.633
+126,44,579,Norway,208,Denmark,Directed,510645.923
+126,53,579,Norway,246,Finland,Directed,736731.737
+126,54,579,Norway,251,France,Directed,1.036054095e6
+126,59,579,Norway,276,Germany,Directed,2.190950103e6
+126,63,579,Norway,300,Greece,Directed,537065.504
+126,71,579,Norway,348,Hungary,Directed,0.024
+126,76,579,Norway,372,Ireland,Directed,277238.569
+126,78,579,Norway,380,Italy,Directed,669185.716
+126,86,579,Norway,410,Rep. of Korea,Directed,1.157877877e6
+126,116,579,Norway,528,Netherlands,Directed,5.753322076e6
+126,135,579,Norway,616,Poland,Directed,626704.962
+126,136,579,Norway,620,Portugal,Directed,65437.03
+126,146,579,Norway,688,Serbia,Directed,46192.869
+126,149,579,Norway,699,India,Directed,1.035641472e6
+126,150,579,Norway,702,Singapore,Directed,37801.761
+126,157,579,Norway,724,Spain,Directed,712813.197
+126,161,579,Norway,752,Sweden,Directed,6.245156066e6
+126,168,579,Norway,784,United Arab Emirates,Directed,30644.295
+126,170,579,Norway,792,TÃ¼rkiye,Directed,860347.898
+126,177,579,Norway,826,United Kingdom,Directed,1.2056849201e7
+126,179,579,Norway,842,USA,Directed,496344.008
+129,99,586,Pakistan,458,Malaysia,Directed,23434.283
+129,131,586,Pakistan,598,Papua New Guinea,Directed,5049.656
+129,150,586,Pakistan,702,Singapore,Directed,18593.5
+129,164,586,Pakistan,764,Thailand,Directed,81130.992
+129,168,586,Pakistan,784,United Arab Emirates,Directed,4596.889
+130,35,591,Panama,170,Colombia,Directed,341.738
+130,168,591,Panama,784,United Arab Emirates,Directed,0.631
+131,8,598,Papua New Guinea,36,Australia,Directed,35045.283
+131,14,598,Papua New Guinea,56,Belgium,Directed,0.142
+131,22,598,Papua New Guinea,96,Brunei Darussalam,Directed,56401.154
+131,70,598,Papua New Guinea,344,"China, Hong Kong SAR",Directed,89792.627
+131,73,598,Papua New Guinea,360,Indonesia,Directed,81842.242
+131,85,598,Papua New Guinea,408,Dem. People's Rep. of Korea,Directed,157731.089
+131,86,598,Papua New Guinea,410,Rep. of Korea,Directed,211599.283
+131,116,598,Papua New Guinea,528,Netherlands,Directed,0.154
+131,150,598,Papua New Guinea,702,Singapore,Directed,303621.044
+133,19,604,Peru,76,Brazil,Directed,46779.949
+133,29,604,Peru,124,Canada,Directed,0.049
+133,32,604,Peru,152,Chile,Directed,36307.256
+133,35,604,Peru,170,Colombia,Directed,0.135
+133,116,604,Peru,528,Netherlands,Directed,0.054
+133,126,604,Peru,579,Norway,Directed,0.001
+133,161,604,Peru,752,Sweden,Directed,0.117
+133,179,604,Peru,842,USA,Directed,210287.655
+134,22,608,Philippines,96,Brunei Darussalam,Directed,22258.639
+134,81,608,Philippines,392,Japan,Directed,2.6
+134,86,608,Philippines,410,Rep. of Korea,Directed,55770.271
+134,116,608,Philippines,528,Netherlands,Directed,0.093
+134,150,608,Philippines,702,Singapore,Directed,0.016
+134,164,608,Philippines,764,Thailand,Directed,187914.254
+134,168,608,Philippines,784,United Arab Emirates,Directed,10.314
+135,43,616,Poland,203,Czechia,Directed,4.454
+135,59,616,Poland,276,Germany,Directed,82147.31
+135,78,616,Poland,380,Italy,Directed,0.017
+135,92,616,Poland,428,Latvia,Directed,15.605
+135,116,616,Poland,528,Netherlands,Directed,4.365
+135,126,616,Poland,579,Norway,Directed,0.296
+135,161,616,Poland,752,Sweden,Directed,0.348
+135,168,616,Poland,784,United Arab Emirates,Directed,8.005
+136,5,620,Portugal,24,Angola,Directed,0.311
+136,111,620,Portugal,508,Mozambique,Directed,4.223
+136,116,620,Portugal,528,Netherlands,Directed,0.088
+136,157,620,Portugal,724,Spain,Directed,29621.604
+137,8,626,Timor-Leste,36,Australia,Directed,0.038
+137,33,626,Timor-Leste,156,China,Directed,104447.253
+137,86,626,Timor-Leste,410,Rep. of Korea,Directed,42240.608
+137,99,626,Timor-Leste,458,Malaysia,Directed,24603.502
+137,150,626,Timor-Leste,702,Singapore,Directed,99789.595
+137,164,626,Timor-Leste,764,Thailand,Directed,29190.42
+138,22,634,Qatar,96,Brunei Darussalam,Directed,65597.44
+138,24,634,Qatar,104,Myanmar,Directed,272859.696
+138,33,634,Qatar,156,China,Directed,3.449792089e6
+138,54,634,Qatar,251,France,Directed,0.449
+138,81,634,Qatar,392,Japan,Directed,4.25301013e6
+138,86,634,Qatar,410,Rep. of Korea,Directed,3.502957958e6
+138,99,634,Qatar,458,Malaysia,Directed,71396.006
+138,105,634,Qatar,490,"Other Asia, nes",Directed,169971.714
+138,112,634,Qatar,512,Oman,Directed,0.216
+138,116,634,Qatar,528,Netherlands,Directed,26.568
+138,134,634,Qatar,608,Philippines,Directed,71764.371
+138,149,634,Qatar,699,India,Directed,845880.491
+138,150,634,Qatar,702,Singapore,Directed,3.493423094e6
+138,164,634,Qatar,764,Thailand,Directed,783240.161
+138,168,634,Qatar,784,United Arab Emirates,Directed,918602.607
+138,179,634,Qatar,842,USA,Directed,3.149
+139,2,642,Romania,8,Albania,Directed,13.835
+139,17,642,Romania,70,Bosnia Herzegovina,Directed,17.0
+139,23,642,Romania,100,Bulgaria,Directed,40486.316
+139,78,642,Romania,380,Italy,Directed,14925.123
+139,116,642,Romania,528,Netherlands,Directed,0.019
+139,126,642,Romania,579,Norway,Directed,0.011
+139,146,642,Romania,688,Serbia,Directed,7701.015
+139,168,642,Romania,784,United Arab Emirates,Directed,0.735
+139,175,642,Romania,804,Ukraine,Directed,13.765
+139,177,642,Romania,826,United Kingdom,Directed,0.463
+139,179,642,Romania,842,USA,Directed,8.352
+140,8,643,Russian Federation,36,Australia,Directed,45973.389
+140,9,643,Russian Federation,40,Austria,Directed,303711.029
+140,14,643,Russian Federation,56,Belgium,Directed,207.6
+140,19,643,Russian Federation,76,Brazil,Directed,17094.389
+140,22,643,Russian Federation,96,Brunei Darussalam,Directed,1.309188671e6
+140,23,643,Russian Federation,100,Bulgaria,Directed,982514.794
+140,26,643,Russian Federation,112,Belarus,Directed,6.700299887e6
+140,33,643,Russian Federation,156,China,Directed,3.5446564659e7
+140,40,643,Russian Federation,191,Croatia,Directed,359156.7
+140,41,643,Russian Federation,192,Cuba,Directed,331132.379
+140,43,643,Russian Federation,203,Czechia,Directed,1.661022022e6
+140,44,643,Russian Federation,208,Denmark,Directed,465546.255
+140,51,643,Russian Federation,233,Estonia,Directed,19015.091
+140,53,643,Russian Federation,246,Finland,Directed,3.031990467e6
+140,54,643,Russian Federation,251,France,Directed,303588.964
+140,59,643,Russian Federation,276,Germany,Directed,9.338622876e6
+140,63,643,Russian Federation,300,Greece,Directed,728170.904
+140,70,643,Russian Federation,344,"China, Hong Kong SAR",Directed,1233.738
+140,71,643,Russian Federation,348,Hungary,Directed,1.638536643e6
+140,78,643,Russian Federation,380,Italy,Directed,3.671794088e6
+140,81,643,Russian Federation,392,Japan,Directed,2.229161035e6
+140,82,643,Russian Federation,398,Kazakhstan,Directed,188.971
+140,86,643,Russian Federation,410,Rep. of Korea,Directed,6.106753833e6
+140,95,643,Russian Federation,440,Lithuania,Directed,1.795013957e6
+140,99,643,Russian Federation,458,Malaysia,Directed,369215.551
+140,116,643,Russian Federation,528,Netherlands,Directed,1.6940598582e7
+140,122,643,Russian Federation,554,New Zealand,Directed,40221.379
+140,126,643,Russian Federation,579,Norway,Directed,2221.031
+140,135,643,Russian Federation,616,Poland,Directed,5.439931736e6
+140,139,643,Russian Federation,642,Romania,Directed,2.71597107e6
+140,142,643,Russian Federation,662,Saint Lucia,Directed,284757.281
+140,146,643,Russian Federation,688,Serbia,Directed,330997.507
+140,149,643,Russian Federation,699,India,Directed,935437.907
+140,150,643,Russian Federation,702,Singapore,Directed,290101.159
+140,151,643,Russian Federation,703,Slovakia,Directed,2.493148438e6
+140,152,643,Russian Federation,704,Viet Nam,Directed,55038.632
+140,157,643,Russian Federation,724,Spain,Directed,1.306177495e6
+140,161,643,Russian Federation,752,Sweden,Directed,197510.642
+140,164,643,Russian Federation,764,Thailand,Directed,93718.759
+140,168,643,Russian Federation,784,United Arab Emirates,Directed,43476.382
+140,170,643,Russian Federation,792,TÃ¼rkiye,Directed,2.105830777e6
+140,177,643,Russian Federation,826,United Kingdom,Directed,1.414795394e6
+140,179,643,Russian Federation,842,USA,Directed,3.766508267e6
+140,181,643,Russian Federation,860,Uzbekistan,Directed,33634.357
+142,116,662,Saint Lucia,528,Netherlands,Directed,0.513
+144,14,682,Saudi Arabia,56,Belgium,Directed,0.114
+144,19,682,Saudi Arabia,76,Brazil,Directed,1.407856881e6
+144,22,682,Saudi Arabia,96,Brunei Darussalam,Directed,903003.86
+144,29,682,Saudi Arabia,124,Canada,Directed,1.765465763e6
+144,33,682,Saudi Arabia,156,China,Directed,4.3938620661e7
+144,43,682,Saudi Arabia,203,Czechia,Directed,0.84
+144,44,682,Saudi Arabia,208,Denmark,Directed,0.036
+144,54,682,Saudi Arabia,251,France,Directed,1.396226339e6
+144,59,682,Saudi Arabia,276,Germany,Directed,476418.427
+144,63,682,Saudi Arabia,300,Greece,Directed,560669.26
+144,73,682,Saudi Arabia,360,Indonesia,Directed,2.268614138e6
+144,78,682,Saudi Arabia,380,Italy,Directed,2.744600859e6
+144,81,682,Saudi Arabia,392,Japan,Directed,2.522481092e7
+144,83,682,Saudi Arabia,400,Jordan,Directed,977722.648
+144,86,682,Saudi Arabia,410,Rep. of Korea,Directed,2.1320549564e7
+144,93,682,Saudi Arabia,430,Liberia,Directed,41.78
+144,99,682,Saudi Arabia,458,Malaysia,Directed,722737.653
+144,105,682,Saudi Arabia,490,"Other Asia, nes",Directed,6.444060432e6
+144,116,682,Saudi Arabia,528,Netherlands,Directed,1.816891925e6
+144,129,682,Saudi Arabia,586,Pakistan,Directed,2.119780478e6
+144,134,682,Saudi Arabia,608,Philippines,Directed,1.185105295e6
+144,135,682,Saudi Arabia,616,Poland,Directed,2.240514956e6
+144,136,682,Saudi Arabia,620,Portugal,Directed,103867.916
+144,149,682,Saudi Arabia,699,India,Directed,1.7905752946e7
+144,150,682,Saudi Arabia,702,Singapore,Directed,2.397201988e6
+144,155,682,Saudi Arabia,710,South Africa,Directed,2.144556453e6
+144,157,682,Saudi Arabia,724,Spain,Directed,2.035017202e6
+144,164,682,Saudi Arabia,764,Thailand,Directed,4.326123144e6
+144,168,682,Saudi Arabia,784,United Arab Emirates,Directed,68634.726
+144,177,682,Saudi Arabia,826,United Kingdom,Directed,69165.596
+144,179,682,Saudi Arabia,842,USA,Directed,8.992009884e6
+145,14,686,Senegal,56,Belgium,Directed,2483.88
+145,60,686,Senegal,288,Ghana,Directed,0.24
+145,116,686,Senegal,528,Netherlands,Directed,17208.759
+146,17,688,Serbia,70,Bosnia Herzegovina,Directed,230.911
+146,54,688,Serbia,251,France,Directed,0.031
+146,116,688,Serbia,528,Netherlands,Directed,0.108
+146,168,688,Serbia,784,United Arab Emirates,Directed,11.787
+146,170,688,Serbia,792,TÃ¼rkiye,Directed,0.011
+148,168,694,Sierra Leone,784,United Arab Emirates,Directed,0.588
+149,8,699,India,36,Australia,Directed,18516.722
+149,29,699,India,124,Canada,Directed,0.006
+149,30,699,India,144,Sri Lanka,Directed,0.01
+149,48,699,India,222,El Salvador,Directed,40.288
+149,84,699,India,404,Kenya,Directed,0.104
+149,98,699,India,454,Malawi,Directed,0.314
+149,115,699,India,524,Nepal,Directed,0.996
+149,116,699,India,528,Netherlands,Directed,0.258
+149,122,699,India,554,New Zealand,Directed,61.86
+149,155,699,India,710,South Africa,Directed,22647.475
+149,157,699,India,724,Spain,Directed,0.325
+149,168,699,India,784,United Arab Emirates,Directed,58.116
+150,8,702,Singapore,36,Australia,Directed,234124.974
+150,14,702,Singapore,56,Belgium,Directed,0.471
+150,22,702,Singapore,96,Brunei Darussalam,Directed,219558.137
+150,30,702,Singapore,144,Sri Lanka,Directed,0.687
+150,54,702,Singapore,251,France,Directed,0.15
+150,59,702,Singapore,276,Germany,Directed,0.012
+150,73,702,Singapore,360,Indonesia,Directed,14.053
+150,89,702,Singapore,418,Lao People's Dem. Rep.,Directed,54.999
+150,99,702,Singapore,458,Malaysia,Directed,40380.585
+150,111,702,Singapore,508,Mozambique,Directed,2.812
+150,116,702,Singapore,528,Netherlands,Directed,1.261
+150,122,702,Singapore,554,New Zealand,Directed,41926.461
+150,130,702,Singapore,591,Panama,Directed,0.01
+150,149,702,Singapore,699,India,Directed,2.264
+150,152,702,Singapore,704,Viet Nam,Directed,1.015
+150,164,702,Singapore,764,Thailand,Directed,1777.655
+150,168,702,Singapore,784,United Arab Emirates,Directed,6.266
+151,9,703,Slovakia,40,Austria,Directed,2442.179
+151,59,703,Slovakia,276,Germany,Directed,1.158
+151,116,703,Slovakia,528,Netherlands,Directed,0.001
+151,168,703,Slovakia,784,United Arab Emirates,Directed,0.735
+152,8,704,Viet Nam,36,Australia,Directed,284854.194
+152,22,704,Viet Nam,96,Brunei Darussalam,Directed,28799.658
+152,33,704,Viet Nam,156,China,Directed,280852.007
+152,81,704,Viet Nam,392,Japan,Directed,144008.11
+152,86,704,Viet Nam,410,Rep. of Korea,Directed,18020.996
+152,89,704,Viet Nam,418,Lao People's Dem. Rep.,Directed,34883.711
+152,99,704,Viet Nam,458,Malaysia,Directed,101947.918
+152,116,704,Viet Nam,528,Netherlands,Directed,0.233
+152,150,704,Viet Nam,702,Singapore,Directed,262689.415
+152,162,704,Viet Nam,757,Switzerland,Directed,77973.824
+152,164,704,Viet Nam,764,Thailand,Directed,560409.017
+152,168,704,Viet Nam,784,United Arab Emirates,Directed,1.416
+153,17,705,Slovenia,70,Bosnia Herzegovina,Directed,36.287
+153,71,705,Slovenia,348,Hungary,Directed,154.006
+153,78,705,Slovenia,380,Italy,Directed,0.602
+153,177,705,Slovenia,826,United Kingdom,Directed,0.188
+153,179,705,Slovenia,842,USA,Directed,0.116
+155,5,710,South Africa,24,Angola,Directed,2.312
+155,10,710,South Africa,44,Bahamas,Directed,62944.757
+155,14,710,South Africa,56,Belgium,Directed,0.117
+155,18,710,South Africa,72,Botswana,Directed,2513.218
+155,33,710,South Africa,156,China,Directed,728091.505
+155,37,710,South Africa,178,Congo,Directed,1.687
+155,38,710,South Africa,180,Dem. Rep. of the Congo,Directed,0.919
+155,54,710,South Africa,251,France,Directed,8.038
+155,58,710,South Africa,270,Gambia,Directed,0.122
+155,67,710,South Africa,324,Guinea,Directed,0.024
+155,79,710,South Africa,384,CÃ´te d'Ivoire,Directed,3.467
+155,86,710,South Africa,410,Rep. of Korea,Directed,78180.57
+155,91,710,South Africa,426,Lesotho,Directed,445.581
+155,98,710,South Africa,454,Malawi,Directed,1.723
+155,100,710,South Africa,466,Mali,Directed,2.893
+155,111,710,South Africa,508,Mozambique,Directed,7.613
+155,113,710,South Africa,516,Namibia,Directed,6071.054
+155,116,710,South Africa,528,Netherlands,Directed,0.083
+155,141,710,South Africa,654,Saint Helena,Directed,0.227
+155,147,710,South Africa,690,Seychelles,Directed,0.044
+155,149,710,South Africa,699,India,Directed,337889.537
+155,150,710,South Africa,702,Singapore,Directed,16442.248
+155,156,710,South Africa,716,Zimbabwe,Directed,9.612
+155,157,710,South Africa,724,Spain,Directed,196794.588
+155,160,710,South Africa,748,Eswatini,Directed,9.523
+155,162,710,South Africa,757,Switzerland,Directed,17971.356
+155,164,710,South Africa,764,Thailand,Directed,69801.061
+155,168,710,South Africa,784,United Arab Emirates,Directed,0.602
+155,177,710,South Africa,826,United Kingdom,Directed,0.018
+155,178,710,South Africa,834,United Rep. of Tanzania,Directed,7.498
+155,179,710,South Africa,842,USA,Directed,67174.509
+155,186,710,South Africa,894,Zambia,Directed,6.316
+156,155,716,Zimbabwe,710,South Africa,Directed,3.18
+156,168,716,Zimbabwe,784,United Arab Emirates,Directed,0.735
+157,4,724,Spain,20,Andorra,Directed,4.892
+157,14,724,Spain,56,Belgium,Directed,0.017
+157,19,724,Spain,76,Brazil,Directed,1.154
+157,35,724,Spain,170,Colombia,Directed,21.629
+157,41,724,Spain,192,Cuba,Directed,6.172
+157,43,724,Spain,203,Czechia,Directed,0.096
+157,46,724,Spain,214,Dominican Rep.,Directed,122.152
+157,47,724,Spain,218,Ecuador,Directed,7.137
+157,54,724,Spain,251,France,Directed,98752.138
+157,59,724,Spain,276,Germany,Directed,0.596
+157,63,724,Spain,300,Greece,Directed,0.07
+157,78,724,Spain,380,Italy,Directed,25313.869
+157,86,724,Spain,410,Rep. of Korea,Directed,0.151
+157,101,724,Spain,470,Malta,Directed,5712.283
+157,104,724,Spain,484,Mexico,Directed,1.514
+157,107,724,Spain,498,Rep. of Moldova,Directed,1.333
+157,110,724,Spain,504,Morocco,Directed,4.038
+157,113,724,Spain,516,Namibia,Directed,0.573
+157,116,724,Spain,528,Netherlands,Directed,1386.936
+157,135,724,Spain,616,Poland,Directed,2.488
+157,136,724,Spain,620,Portugal,Directed,9058.936
+157,138,724,Spain,634,Qatar,Directed,26.338
+157,150,724,Spain,702,Singapore,Directed,0.001
+157,153,724,Spain,705,Slovenia,Directed,42549.8
+157,162,724,Spain,757,Switzerland,Directed,8.419
+157,168,724,Spain,784,United Arab Emirates,Directed,10.892
+157,177,724,Spain,826,United Kingdom,Directed,1.459
+157,179,724,Spain,842,USA,Directed,4.115
+158,33,728,South Sudan,156,China,Directed,299409.745
+158,78,728,South Sudan,380,Italy,Directed,88656.458
+158,81,728,South Sudan,392,Japan,Directed,66643.5
+158,150,728,South Sudan,702,Singapore,Directed,758.365
+158,168,728,South Sudan,784,United Arab Emirates,Directed,0.643
+159,78,729,Sudan,380,Italy,Directed,159973.176
+159,99,729,Sudan,458,Malaysia,Directed,111830.662
+159,101,729,Sudan,470,Malta,Directed,0.316
+159,149,729,Sudan,699,India,Directed,123306.382
+159,150,729,Sudan,702,Singapore,Directed,0.003
+159,168,729,Sudan,784,United Arab Emirates,Directed,0.398
+160,111,748,Eswatini,508,Mozambique,Directed,0.07
+160,155,748,Eswatini,710,South Africa,Directed,0.014
+160,168,748,Eswatini,784,United Arab Emirates,Directed,0.822
+161,29,752,Sweden,124,Canada,Directed,0.117
+161,33,752,Sweden,156,China,Directed,56902.838
+161,35,752,Sweden,170,Colombia,Directed,1.166
+161,44,752,Sweden,208,Denmark,Directed,5231.04
+161,53,752,Sweden,246,Finland,Directed,31.616
+161,58,752,Sweden,270,Gambia,Directed,0.992
+161,72,752,Sweden,352,Iceland,Directed,0.183
+161,116,752,Sweden,528,Netherlands,Directed,21966.454
+161,126,752,Sweden,579,Norway,Directed,3.614
+161,151,752,Sweden,703,Slovakia,Directed,0.395
+161,164,752,Sweden,764,Thailand,Directed,0.233
+161,168,752,Sweden,784,United Arab Emirates,Directed,2.818
+161,177,752,Sweden,826,United Kingdom,Directed,37605.14
+161,179,752,Sweden,842,USA,Directed,43847.498
+162,59,757,Switzerland,276,Germany,Directed,0.396
+162,116,757,Switzerland,528,Netherlands,Directed,1.01
+162,135,757,Switzerland,616,Poland,Directed,0.52
+162,156,757,Switzerland,716,Zimbabwe,Directed,4.32
+162,164,757,Switzerland,764,Thailand,Directed,0.332
+162,168,757,Switzerland,784,United Arab Emirates,Directed,28.793
+162,170,757,Switzerland,792,TÃ¼rkiye,Directed,0.108
+164,8,764,Thailand,36,Australia,Directed,22566.181
+164,14,764,Thailand,56,Belgium,Directed,0.004
+164,24,764,Thailand,104,Myanmar,Directed,123.968
+164,27,764,Thailand,116,Cambodia,Directed,0.335
+164,33,764,Thailand,156,China,Directed,245165.684
+164,54,764,Thailand,251,France,Directed,0.031
+164,59,764,Thailand,276,Germany,Directed,0.091
+164,78,764,Thailand,380,Italy,Directed,0.005
+164,81,764,Thailand,392,Japan,Directed,0.2
+164,86,764,Thailand,410,Rep. of Korea,Directed,19190.994
+164,89,764,Thailand,418,Lao People's Dem. Rep.,Directed,823.11
+164,99,764,Thailand,458,Malaysia,Directed,53079.245
+164,116,764,Thailand,528,Netherlands,Directed,0.06
+164,130,764,Thailand,591,Panama,Directed,0.004
+164,149,764,Thailand,699,India,Directed,0.008
+164,150,764,Thailand,702,Singapore,Directed,68008.606
+164,168,764,Thailand,784,United Arab Emirates,Directed,1.284
+164,177,764,Thailand,826,United Kingdom,Directed,0.108
+164,179,764,Thailand,842,USA,Directed,0.222
+165,14,768,Togo,56,Belgium,Directed,0.871
+165,149,768,Togo,699,India,Directed,45743.977
+165,161,768,Togo,752,Sweden,Directed,0.35
+167,14,780,Trinidad and Tobago,56,Belgium,Directed,45837.384
+167,35,780,Trinidad and Tobago,170,Colombia,Directed,92908.203
+167,59,780,Trinidad and Tobago,276,Germany,Directed,28397.36
+167,116,780,Trinidad and Tobago,528,Netherlands,Directed,0.05
+167,157,780,Trinidad and Tobago,724,Spain,Directed,87972.221
+167,177,780,Trinidad and Tobago,826,United Kingdom,Directed,62833.043
+167,179,780,Trinidad and Tobago,842,USA,Directed,983295.017
+168,5,784,United Arab Emirates,24,Angola,Directed,487.208
+168,8,784,United Arab Emirates,36,Australia,Directed,38012.425
+168,12,784,United Arab Emirates,50,Bangladesh,Directed,19.716
+168,14,784,United Arab Emirates,56,Belgium,Directed,0.046
+168,22,784,United Arab Emirates,96,Brunei Darussalam,Directed,175686.468
+168,24,784,United Arab Emirates,104,Myanmar,Directed,27.447
+168,25,784,United Arab Emirates,108,Burundi,Directed,0.789
+168,30,784,United Arab Emirates,144,Sri Lanka,Directed,489548.093
+168,33,784,United Arab Emirates,156,China,Directed,1.6374657255e7
+168,36,784,United Arab Emirates,174,Comoros,Directed,1.648
+168,38,784,United Arab Emirates,180,Dem. Rep. of the Congo,Directed,21.509
+168,50,784,United Arab Emirates,231,Ethiopia,Directed,244.569
+168,54,784,United Arab Emirates,251,France,Directed,2.03
+168,55,784,United Arab Emirates,262,Djibouti,Directed,6.807
+168,56,784,United Arab Emirates,266,Gabon,Directed,0.147
+168,58,784,United Arab Emirates,270,Gambia,Directed,20.333
+168,60,784,United Arab Emirates,288,Ghana,Directed,0.168
+168,70,784,United Arab Emirates,344,"China, Hong Kong SAR",Directed,9.274
+168,73,784,United Arab Emirates,360,Indonesia,Directed,18677.573
+168,75,784,United Arab Emirates,368,Iraq,Directed,9.936
+168,78,784,United Arab Emirates,380,Italy,Directed,28.268
+168,81,784,United Arab Emirates,392,Japan,Directed,2.1948699941e7
+168,84,784,United Arab Emirates,404,Kenya,Directed,0.427
+168,86,784,United Arab Emirates,410,Rep. of Korea,Directed,3.767711928e6
+168,87,784,United Arab Emirates,414,Kuwait,Directed,0.119
+168,93,784,United Arab Emirates,430,Liberia,Directed,144.675
+168,99,784,United Arab Emirates,458,Malaysia,Directed,375601.201
+168,105,784,United Arab Emirates,490,"Other Asia, nes",Directed,1.945301657e6
+168,112,784,United Arab Emirates,512,Oman,Directed,103.241
+168,113,784,United Arab Emirates,516,Namibia,Directed,0.352
+168,116,784,United Arab Emirates,528,Netherlands,Directed,2.209
+168,122,784,United Arab Emirates,554,New Zealand,Directed,1.665012786e6
+168,126,784,United Arab Emirates,579,Norway,Directed,3.869
+168,129,784,United Arab Emirates,586,Pakistan,Directed,1.738410592e6
+168,134,784,United Arab Emirates,608,Philippines,Directed,310018.914
+168,140,784,United Arab Emirates,643,Russian Federation,Directed,0.285
+168,144,784,United Arab Emirates,682,Saudi Arabia,Directed,3.824
+168,147,784,United Arab Emirates,690,Seychelles,Directed,0.996
+168,149,784,United Arab Emirates,699,India,Directed,1.1715460532e7
+168,150,784,United Arab Emirates,702,Singapore,Directed,6.994231264e6
+168,155,784,United Arab Emirates,710,South Africa,Directed,74225.755
+168,156,784,United Arab Emirates,716,Zimbabwe,Directed,12.504
+168,164,784,United Arab Emirates,764,Thailand,Directed,6.329260929e6
+168,174,784,United Arab Emirates,800,Uganda,Directed,4.587
+168,177,784,United Arab Emirates,826,United Kingdom,Directed,2.31
+168,178,784,United Arab Emirates,834,United Rep. of Tanzania,Directed,0.49
+168,179,784,United Arab Emirates,842,USA,Directed,459704.117
+168,185,784,United Arab Emirates,887,Yemen,Directed,98.673
+168,186,784,United Arab Emirates,894,Zambia,Directed,45602.849
+169,33,788,Tunisia,156,China,Directed,18407.217
+169,42,788,Tunisia,196,Cyprus,Directed,1324.272
+169,54,788,Tunisia,251,France,Directed,112331.543
+169,59,788,Tunisia,276,Germany,Directed,33118.373
+169,63,788,Tunisia,300,Greece,Directed,45704.608
+169,73,788,Tunisia,360,Indonesia,Directed,21596.859
+169,78,788,Tunisia,380,Italy,Directed,92369.656
+169,94,788,Tunisia,434,Libya,Directed,0.06
+169,116,788,Tunisia,528,Netherlands,Directed,95622.939
+169,139,788,Tunisia,642,Romania,Directed,105278.812
+169,150,788,Tunisia,702,Singapore,Directed,10079.255
+169,157,788,Tunisia,724,Spain,Directed,32828.551
+169,162,788,Tunisia,757,Switzerland,Directed,153386.415
+169,170,788,Tunisia,792,TÃ¼rkiye,Directed,51198.631
+169,177,788,Tunisia,826,United Kingdom,Directed,5428.501
+169,179,788,Tunisia,842,USA,Directed,2203.246
+170,14,792,TÃ¼rkiye,56,Belgium,Directed,152.175
+170,43,792,TÃ¼rkiye,203,Czechia,Directed,0.002
+170,54,792,TÃ¼rkiye,251,France,Directed,25473.536
+170,76,792,TÃ¼rkiye,372,Ireland,Directed,42666.789
+170,78,792,TÃ¼rkiye,380,Italy,Directed,132094.314
+170,102,792,TÃ¼rkiye,478,Mauritania,Directed,0.523
+170,116,792,TÃ¼rkiye,528,Netherlands,Directed,0.4
+170,139,792,TÃ¼rkiye,642,Romania,Directed,434491.131
+170,149,792,TÃ¼rkiye,699,India,Directed,555393.871
+170,168,792,TÃ¼rkiye,784,United Arab Emirates,Directed,9.346
+170,177,792,TÃ¼rkiye,826,United Kingdom,Directed,50640.337
+171,6,795,Turkmenistan,31,Azerbaijan,Directed,52543.455
+171,44,795,Turkmenistan,208,Denmark,Directed,0.362
+171,63,795,Turkmenistan,300,Greece,Directed,4227.243
+171,78,795,Turkmenistan,380,Italy,Directed,21267.998
+171,181,795,Turkmenistan,860,Uzbekistan,Directed,152716.534
+174,38,800,Uganda,180,Dem. Rep. of the Congo,Directed,4.703
+174,168,800,Uganda,784,United Arab Emirates,Directed,1.278
+175,43,804,Ukraine,203,Czechia,Directed,0.21
+175,54,804,Ukraine,251,France,Directed,1.566
+175,116,804,Ukraine,528,Netherlands,Directed,0.001
+175,139,804,Ukraine,642,Romania,Directed,27989.041
+175,157,804,Ukraine,724,Spain,Directed,0.234
+175,168,804,Ukraine,784,United Arab Emirates,Directed,28.077
+176,14,818,Egypt,56,Belgium,Directed,0.044
+176,23,818,Egypt,100,Bulgaria,Directed,163666.324
+176,29,818,Egypt,124,Canada,Directed,75748.482
+176,33,818,Egypt,156,China,Directed,232271.799
+176,40,818,Egypt,191,Croatia,Directed,26825.669
+176,59,818,Egypt,276,Germany,Directed,212654.808
+176,63,818,Egypt,300,Greece,Directed,652284.51
+176,78,818,Egypt,380,Italy,Directed,294498.78
+176,116,818,Egypt,528,Netherlands,Directed,1.365
+176,149,818,Egypt,699,India,Directed,1.479045174e6
+176,150,818,Egypt,702,Singapore,Directed,0.032
+176,161,818,Egypt,752,Sweden,Directed,0.117
+177,5,826,United Kingdom,24,Angola,Directed,1.444
+177,8,826,United Kingdom,36,Australia,Directed,1.619
+177,9,826,United Kingdom,40,Austria,Directed,55972.047
+177,14,826,United Kingdom,56,Belgium,Directed,146490.898
+177,18,826,United Kingdom,72,Botswana,Directed,0.062
+177,19,826,United Kingdom,76,Brazil,Directed,0.139
+177,29,826,United Kingdom,124,Canada,Directed,186193.392
+177,33,826,United Kingdom,156,China,Directed,2.89641762e6
+177,42,826,United Kingdom,196,Cyprus,Directed,1.473
+177,43,826,United Kingdom,203,Czechia,Directed,3.286
+177,44,826,United Kingdom,208,Denmark,Directed,202009.419
+177,46,826,United Kingdom,214,Dominican Rep.,Directed,0.674
+177,51,826,United Kingdom,233,Estonia,Directed,0.262
+177,53,826,United Kingdom,246,Finland,Directed,3.646
+177,54,826,United Kingdom,251,France,Directed,926860.203
+177,59,826,United Kingdom,276,Germany,Directed,2.172458496e6
+177,60,826,United Kingdom,288,Ghana,Directed,3.153
+177,63,826,United Kingdom,300,Greece,Directed,0.533
+177,71,826,United Kingdom,348,Hungary,Directed,0.133
+177,72,826,United Kingdom,352,Iceland,Directed,0.021
+177,76,826,United Kingdom,372,Ireland,Directed,85016.767
+177,78,826,United Kingdom,380,Italy,Directed,861359.11
+177,81,826,United Kingdom,392,Japan,Directed,51296.602
+177,84,826,United Kingdom,404,Kenya,Directed,0.109
+177,86,826,United Kingdom,410,Rep. of Korea,Directed,1.19783307e6
+177,90,826,United Kingdom,422,Lebanon,Directed,0.067
+177,98,826,United Kingdom,454,Malawi,Directed,0.017
+177,101,826,United Kingdom,470,Malta,Directed,0.212
+177,105,826,United Kingdom,490,"Other Asia, nes",Directed,2.003
+177,116,826,United Kingdom,528,Netherlands,Directed,9.24679791e6
+177,126,826,United Kingdom,579,Norway,Directed,282934.272
+177,135,826,United Kingdom,616,Poland,Directed,147968.577
+177,136,826,United Kingdom,620,Portugal,Directed,122288.798
+177,139,826,United Kingdom,642,Romania,Directed,0.966
+177,149,826,United Kingdom,699,India,Directed,103925.981
+177,150,826,United Kingdom,702,Singapore,Directed,121811.661
+177,155,826,United Kingdom,710,South Africa,Directed,33442.171
+177,157,826,United Kingdom,724,Spain,Directed,230432.95
+177,161,826,United Kingdom,752,Sweden,Directed,741596.329
+177,164,826,United Kingdom,764,Thailand,Directed,71534.744
+177,168,826,United Kingdom,784,United Arab Emirates,Directed,29976.599
+177,175,826,United Kingdom,804,Ukraine,Directed,47425.611
+177,179,826,United Kingdom,842,USA,Directed,1.081346763e6
+178,112,834,United Rep. of Tanzania,512,Oman,Directed,0.219
+178,168,834,United Rep. of Tanzania,784,United Arab Emirates,Directed,636.81
+179,5,842,USA,24,Angola,Directed,0.171
+179,7,842,USA,32,Argentina,Directed,344.85
+179,8,842,USA,36,Australia,Directed,326761.011
+179,10,842,USA,44,Bahamas,Directed,29.216
+179,14,842,USA,56,Belgium,Directed,29902.53
+179,16,842,USA,68,Bolivia (Plurinational State of),Directed,0.058
+179,19,842,USA,76,Brazil,Directed,1.126404236e6
+179,22,842,USA,96,Brunei Darussalam,Directed,0.293
+179,29,842,USA,124,Canada,Directed,7.682856698e6
+179,30,842,USA,144,Sri Lanka,Directed,0.03
+179,32,842,USA,152,Chile,Directed,421155.018
+179,33,842,USA,156,China,Directed,5.824972894e6
+179,35,842,USA,170,Colombia,Directed,56406.382
+179,39,842,USA,188,Costa Rica,Directed,7.052
+179,40,842,USA,191,Croatia,Directed,2.12
+179,43,842,USA,203,Czechia,Directed,422354.243
+179,44,842,USA,208,Denmark,Directed,1.145247166e6
+179,45,842,USA,212,Dominica,Directed,55725.566
+179,46,842,USA,214,Dominican Rep.,Directed,544144.729
+179,53,842,USA,246,Finland,Directed,40108.913
+179,54,842,USA,251,France,Directed,2.817193849e6
+179,58,842,USA,270,Gambia,Directed,0.025
+179,59,842,USA,276,Germany,Directed,4.171547037e6
+179,63,842,USA,300,Greece,Directed,0.056
+179,66,842,USA,320,Guatemala,Directed,107.174
+179,68,842,USA,328,Guyana,Directed,0.469
+179,71,842,USA,348,Hungary,Directed,0.36
+179,73,842,USA,360,Indonesia,Directed,94701.969
+179,76,842,USA,372,Ireland,Directed,881353.198
+179,77,842,USA,376,Israel,Directed,197356.75
+179,78,842,USA,380,Italy,Directed,1.061388967e6
+179,81,842,USA,392,Japan,Directed,336038.444
+179,82,842,USA,398,Kazakhstan,Directed,2.861
+179,84,842,USA,404,Kenya,Directed,0.732
+179,86,842,USA,410,Rep. of Korea,Directed,8.421890225e6
+179,89,842,USA,418,Lao People's Dem. Rep.,Directed,1.503
+179,90,842,USA,422,Lebanon,Directed,1.592
+179,93,842,USA,430,Liberia,Directed,0.068
+179,95,842,USA,440,Lithuania,Directed,248133.846
+179,96,842,USA,442,Luxembourg,Directed,0.063
+179,105,842,USA,490,"Other Asia, nes",Directed,3.788230897e6
+179,109,842,USA,500,Montserrat,Directed,0.016
+179,116,842,USA,528,Netherlands,Directed,5.804764201e6
+179,118,842,USA,533,Aruba,Directed,61800.5
+179,123,842,USA,558,Nicaragua,Directed,384421.904
+179,126,842,USA,579,Norway,Directed,674501.858
+179,130,842,USA,591,Panama,Directed,397444.5
+179,131,842,USA,598,Papua New Guinea,Directed,0.216
+179,133,842,USA,604,Peru,Directed,535166.786
+179,135,842,USA,616,Poland,Directed,58117.456
+179,136,842,USA,620,Portugal,Directed,491448.316
+179,140,842,USA,643,Russian Federation,Directed,1.198
+179,146,842,USA,688,Serbia,Directed,0.01
+179,149,842,USA,699,India,Directed,1.016400546e7
+179,150,842,USA,702,Singapore,Directed,2.475793929e6
+179,152,842,USA,704,Viet Nam,Directed,142674.907
+179,155,842,USA,710,South Africa,Directed,106005.1
+179,157,842,USA,724,Spain,Directed,2.23692731e6
+179,161,842,USA,752,Sweden,Directed,620002.954
+179,162,842,USA,757,Switzerland,Directed,394620.33
+179,164,842,USA,764,Thailand,Directed,1.321040719e6
+179,166,842,USA,776,Tonga,Directed,4.931
+179,168,842,USA,784,United Arab Emirates,Directed,42925.324
+179,174,842,USA,800,Uganda,Directed,0.074
+179,175,842,USA,804,Ukraine,Directed,18785.188
+179,177,842,USA,826,United Kingdom,Directed,5.646669795e6
+179,180,842,USA,858,Uruguay,Directed,360565.727
+179,182,842,USA,862,Venezuela,Directed,31474.52
+180,63,858,Uruguay,300,Greece,Directed,0.035
+181,168,860,Uzbekistan,784,United Arab Emirates,Directed,0.59
+182,41,862,Venezuela,192,Cuba,Directed,529709.127
+182,78,862,Venezuela,380,Italy,Directed,35.035
+182,99,862,Venezuela,458,Malaysia,Directed,5952.99
+182,168,862,Venezuela,784,United Arab Emirates,Directed,0.779
+185,9,887,Yemen,40,Austria,Directed,144661.688
+185,33,887,Yemen,156,China,Directed,479558.689
+185,59,887,Yemen,276,Germany,Directed,97273.952
+185,116,887,Yemen,528,Netherlands,Directed,2970.524
+185,164,887,Yemen,764,Thailand,Directed,409089.11
+185,168,887,Yemen,784,United Arab Emirates,Directed,19.581
+186,59,894,Zambia,276,Germany,Directed,0.01
+186,98,894,Zambia,454,Malawi,Directed,23.876
+186,155,894,Zambia,710,South Africa,Directed,463.228
