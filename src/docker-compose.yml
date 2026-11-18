@@ -1,0 +1,17 @@
+services:
+  api:
+    build: ./server
+    environment:
+      DATA_DIR: /data
+      HS_CODE: "2709"      # crude petroleum (HS 2709; BACI k = 270900)
+      WEIGHT: v            # q = tonnes, v = trade value (k USD)
+      PORT: "8081"
+    volumes:
+      - ./data:/data       # put BACI yearly CSVs here
+    expose: ["8081"]
+  web:
+    build: ./web
+    environment:
+      API_URL: http://api:8081
+    ports: ["3000:3000"]
+    depends_on: [api]

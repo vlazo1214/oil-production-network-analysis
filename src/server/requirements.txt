@@ -1,0 +1,6 @@
+fastapi==0.115.*
+uvicorn[standard]==0.30.*
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+python-igraph>=0.11

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crude oil trade network, 2021–2024</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>How did the war in Ukraine rewire crude oil trade?</h1>
+    <p class="sub">CEPII BACI, HS 2709, one network per year from 2021 to 2024</p>
+  </div>
+  <nav>
+    <button data-tab="overview" class="on">Years compared</button>
+    <button data-tab="network">Network structure</button>
+    <button data-tab="robust">Robustness tests</button>
+    <button data-tab="scenario">Supply shock</button>
+  </nav>
+</header>
+<div id="banner" hidden></div>
+
+<main>
+<section id="overview" class="tab on">
+  <div class="panel"><div id="ov-table" class="scroll"></div></div>
+  <div class="panel"><h2>Largest exporters, share of global flow</h2><div class="chart"><canvas id="ov-chart"></canvas></div></div>
+</section>
+
+<section id="network" class="tab">
+  <div class="bar">
+    <label>Year <select id="net-year"></select></label>
+    <label>Size and rank by <select id="net-metric"></select></label>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h2>Trade links between the top 70 countries</h2>
+      <p class="hint">Amber nodes mostly export, blue nodes mostly import. Outlined nodes are Russia and Ukraine. Drag to rearrange.</p>
+      <svg id="graph" viewBox="0 0 760 520"></svg></div>
+    <div class="stack">
+      <div class="panel"><h2>Global topology</h2><div id="topo" class="kv"></div></div>
+      <div class="panel"><h2>Highest ranked countries</h2><div id="rank" class="scroll"></div></div>
+    </div>
+  </div>
+  <div class="panel"><h2>Degree distribution (complementary CDF, log–log)</h2><div class="chart short"><canvas id="deg-chart"></canvas></div></div>
+</section>
+
+<section id="robust" class="tab">
+  <form id="rob-form" class="panel form">
+    <fieldset><legend>Remove</legend>
+      <label><input type="radio" name="mode" value="node" checked> countries (nodes)</label>
+      <label><input type="radio" name="mode" value="edge"> trade links (edges)</label></fieldset>
+    <fieldset><legend>Removal order</legend><div id="rob-strats"></div>
+      <label class="adapt"><input type="checkbox" id="rob-adaptive"> Recompute the ranking after each removal</label></fieldset>
+    <fieldset><legend>Years</legend><div id="rob-years"></div></fieldset>
+    <fieldset><legend>Simulation</legend>
+      <label>Steps <input type="number" id="rob-steps" value="20" min="2" max="100"></label>
+      <label>Remove up to (%) <input type="number" id="rob-max" value="20" min="1" max="100"></label>
+      <label>Random runs <input type="number" id="rob-runs" value="10" min="1" max="200"></label></fieldset>
+    <fieldset><legend>Rerouting (consumption of every country stays fixed)</legend>
+      <label>Exporter capacity headroom (%) <input type="number" id="rob-surge" value="10" min="0" max="500"></label>
+      <label><input type="checkbox" id="rob-new"> Importers may buy from new partners</label></fieldset>
+    <button class="go" id="rob-go">Run test</button>
+  </form>
+  <div class="panel" id="rob-out" hidden>
+    <div class="bar"><label>Plot <select id="rob-metric">
+      <option value="unmet">Unmet demand (%)</option>
+      <option value="affected">Countries short by more than 10% (%)</option>
+      <option value="retained">Trade volume delivered (%)</option>
+      <option value="lwcc">Largest connected component (%)</option></select></label>
+      <span class="hint">Colour = year, line style = removal order</span></div>
+    <div class="chart tall"><canvas id="rob-chart"></canvas></div>
+    <h2>Summary by year and removal order</h2><div id="rob-table" class="scroll"></div>
+  </div>
+</section>
+
+<section id="scenario" class="tab">
+  <form id="sc-form" class="panel form">
+    <fieldset><legend>Country losing exports</legend>
+      <select id="sc-country"></select>
+      <label>Export loss (%) <input type="range" id="sc-red" min="0" max="100" value="100"><output id="sc-red-v">100</output></label></fieldset>
+    <fieldset><legend>Years</legend><div id="sc-years"></div></fieldset>
+    <fieldset><legend>Rerouting</legend>
+      <label>Exporter capacity headroom (%) <input type="number" id="sc-surge" value="10" min="0" max="500"></label>
+      <label><input type="checkbox" id="sc-new" checked> Importers may buy from new partners</label></fieldset>
+    <button class="go">Run shock</button>
+  </form>
+  <div id="sc-out" hidden>
+    <div class="panel"><h2>Global unmet demand, before and after rerouting</h2><p class="hint">The same shock applied to each year's network shows how exposure changed.</p>
+      <div class="chart short"><canvas id="sc-chart"></canvas></div></div>
+    <div class="panel"><div class="bar"><label>Year <select id="sc-year"></select></label>
+      <label>Rank importers by <select id="sc-sort"><option value="direct_pct">share of demand lost</option><option value="direct_loss">volume lost</option></select></label></div>
+      <div class="chart tall"><canvas id="sc-chart2"></canvas></div></div>
+    <div class="panel"><h2>Exporters that fill the gap</h2><div id="sc-sup" class="scroll"></div></div>
+  </div>
+</section>
+</main>
+<script src="/vendor/d3/d3.min.js"></script>
+<script src="/vendor/chart/chart.umd.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
