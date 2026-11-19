@@ -3,11 +3,10 @@ services:
     build: ./server
     environment:
       DATA_DIR: /data
-      HS_CODE: "2709"      # crude petroleum (HS 2709; BACI k = 270900)
-      WEIGHT: v            # q = tonnes, v = trade value (k USD)
-      PORT: "8081"
+      WEIGHT: q            # q = quantity_tons, v = value_kUSD
+      # PRODUCT: "crude oil"   # optional: keep only rows whose `product` equals this
     volumes:
-      - ./data:/data       # put BACI yearly CSVs here
+      - ./data:/data       # put your cleaned CSV(s) here
     expose: ["8081"]
   web:
     build: ./web

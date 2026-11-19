@@ -74,26 +74,29 @@ def topology(W):
 
 def network_payload(codes, names, W, year, max_edges=600):
     c = centralities(W)
-    nodes = [{"code": int(codes[i]), "name": names[i], **{k: nz(v[i]) for k, v in c.items()}} for i in range(len(codes))]
+    def partners(w):
+        return [{"name": names[j], "w": float(w[j])} for j in np.argsort(-w)[:5] if w[j] > 0]
+    nodes = [{"code": int(codes[i]), "name": names[i], **{k: nz(v[i]) for k, v in c.items()},
+              "buyers": partners(W[i, :]), "suppliers": partners(W[:, i])} for i in range(len(codes))]
     flat = np.argsort(W.ravel())[::-1][: min(max_edges, int((W > 0).sum()))]
     ii, jj = np.unravel_index(flat, W.shape)
     edges = [{"s": int(codes[a]), "t": int(codes[b]), "w": float(W[a, b])} for a, b in zip(ii, jj)]
     return {"year": year, "nodes": nodes, "edges": edges, "topology": topology(W)}
 
 
-def year_summary(codes, names, W):
+def year_summary(codes, names, W, ru=None, ua=None):
     ex, im, tot = W.sum(1), W.sum(0), W.sum()
 
     def top(v):
         return [{"code": int(codes[i]), "name": names[i], "share": float(100 * v[i] / tot)} for i in np.argsort(v)[::-1][:10]]
 
     def focus(c):
-        i = np.flatnonzero(codes == c)
+        i = np.flatnonzero(codes == c) if c is not None else []
         return (float(100 * ex[i[0]] / tot), int((W[i[0]] > 0).sum())) if len(i) else (0.0, 0)
 
     s = topology(W)
-    s["ru_share"], s["ru_partners"] = focus(643)
-    s["ua_share"], s["ua_partners"] = focus(804)
+    s["ru_share"], s["ru_partners"] = focus(ru)
+    s["ua_share"], s["ua_partners"] = focus(ua)
     s["top_exporters"], s["top_importers"] = top(ex), top(im)
     return s
 

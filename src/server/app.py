@@ -1,4 +1,4 @@
-import os, re, threading, logging
+import os, re, json, pickle, hashlib, threading, logging
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 from typing import Literal, Optional
@@ -14,12 +14,16 @@ import sim
 
 log = logging.getLogger("uvicorn.error")
 DATA = Path(os.environ.get("DATA_DIR", "/data"))
-HS = int(os.environ.get("HS_CODE", "2709"))
-WEIGHT = os.environ.get("WEIGHT", "q")          # q = tonnes, v = value (k USD)
+# Expected columns: year, exporter_code, exporter, importer_code, importer, product, value_kUSD, quantity_tons
+WEIGHT = "v" if os.environ.get("WEIGHT", "q").lower() in ("v", "value", "value_kusd") else "q"
+WCOL = {"q": "quantity_tons", "v": "value_kUSD"}[WEIGHT]
+PRODUCT = os.environ.get("PRODUCT") or None      # optional: keep only rows whose `product` equals this
 
 NETS: dict[int, dict] = {}                       # year -> {codes, names, W}
 NAMES: dict[int, str] = {}
 STATE = {"status": "loading"}
+FOCUS: dict = {"russia": None, "ukraine": None}
+PRODUCTS: list = []
 CACHE: dict = {}
 POOL = ProcessPoolExecutor(max_workers=os.cpu_count() or 2)
 
@@ -32,57 +36,90 @@ async def _bad(_: Request, e: RequestValidationError):
 
 
 # ------------------------------------------------------------------ data loading
-def load_names():
-    for f in DATA.glob("country_codes*.csv"):
-        try:
-            df = pd.read_csv(f)
-            col = next(c for c in ("country_name_abbreviation", "country_name", "country_name_full") if c in df)
-            NAMES.update(zip(df["country_code"].astype(int), df[col].astype(str)))
-        except Exception as e:
-            log.warning("could not read %s: %s", f, e)
+def _clean_code(col):
+    return col.astype(str).str.strip().str.replace(r"\.0$", "", regex=True)
 
 
-def read_year(path: Path, year: int):
-    cache = DATA / "cache" / f"net_{year}_{HS}_{WEIGHT}.npz"
+def read_all():
+    """Read every CSV in DATA into {year: (codes, W)}. Cached on file size/mtime so restarts are fast."""
+    files = sorted(DATA.glob("*.csv"))
+    if not files:
+        raise FileNotFoundError(f"no CSV files found in {DATA}")
+    sig = hashlib.md5(json.dumps([[f.name, f.stat().st_size, int(f.stat().st_mtime)] for f in files] + [WCOL, PRODUCT]).encode()).hexdigest()[:12]
+    cache = DATA / "cache" / f"nets_{sig}.pkl"
     if cache.exists():
-        z = np.load(cache)
-        return z["codes"], z["W"]
-    parts = []
-    for ch in pd.read_csv(path, usecols=["i", "j", "k", "v", "q"], chunksize=2_000_000,
-                          dtype={"i": "int64", "j": "int64", "k": "int64", "v": "float64", "q": "float64"},
-                          na_values=["NA", ""]):
-        ch = ch[ch["k"] // 100 == HS][["i", "j", WEIGHT]].dropna()
-        parts.append(ch[(ch[WEIGHT] > 0) & (ch["i"] != ch["j"])])
-    df = pd.concat(parts).groupby(["i", "j"], as_index=False)[WEIGHT].sum()
+        return pickle.loads(cache.read_bytes())
+
+    need = ["year", "exporter_code", "importer_code", WCOL]
+    parts, names, products = [], {}, set()
+    for f in files:
+        header = pd.read_csv(f, nrows=0).columns
+        missing = [c for c in need if c not in header]
+        if missing:
+            raise ValueError(f"{f.name}: missing column(s) {missing}; found {list(header)}")
+        use = [c for c in ["year", "exporter_code", "exporter", "importer_code", "importer", "product", WCOL] if c in header]
+        for ch in pd.read_csv(f, usecols=use, chunksize=1_000_000, na_values=["NA", ""],
+                              dtype={"exporter_code": str, "importer_code": str}):
+            STATE["status"] = f"reading {f.name}"
+            if PRODUCT and "product" in ch:
+                ch = ch[ch["product"].astype(str) == PRODUCT]
+            if "product" in ch:
+                products.update(ch["product"].dropna().astype(str).unique())
+            ch = ch.assign(i=_clean_code(ch["exporter_code"]), j=_clean_code(ch["importer_code"]),
+                           year=pd.to_numeric(ch["year"], errors="coerce"), w=pd.to_numeric(ch[WCOL], errors="coerce"))
+            for side, code in (("exporter", "i"), ("importer", "j")):
+                if side in ch:
+                    names.update(ch[[code, side]].dropna().drop_duplicates(code).itertuples(index=False, name=None))
+            ch = ch.dropna(subset=["year", "w", "i", "j"])
+            ch = ch[(ch["w"] > 0) & (ch["i"] != ch["j"])]
+            parts.append(ch.groupby([ch["year"].astype(int), "i", "j"], as_index=False)["w"].sum())
+    df = pd.concat(parts).groupby(["year", "i", "j"], as_index=False)["w"].sum()
     if df.empty:
-        raise ValueError(f"no HS {HS} flows found in {path.name}")
-    codes = np.union1d(df["i"].to_numpy(), df["j"].to_numpy())
-    W = np.zeros((len(codes), len(codes)))
-    W[np.searchsorted(codes, df["i"]), np.searchsorted(codes, df["j"])] = df[WEIGHT].to_numpy()
+        raise ValueError("no usable rows (check the product filter and that quantities are positive)")
+
+    # numeric country codes are used as-is; otherwise (e.g. ISO3) assign ids and keep the labels as names
+    raw = sorted(set(df["i"]) | set(df["j"]))
+    if all(re.fullmatch(r"\d+", c) for c in raw):
+        idmap = {c: int(c) for c in raw}
+    else:
+        idmap = {c: k + 1 for k, c in enumerate(raw)}
+    nm = {idmap[c]: str(names.get(c, c)) for c in raw}
+    nets = {}
+    for year, g in df.groupby("year"):
+        a = g["i"].map(idmap).to_numpy()
+        b = g["j"].map(idmap).to_numpy()
+        codes = np.union1d(a, b)
+        W = np.zeros((len(codes), len(codes)))
+        W[np.searchsorted(codes, a), np.searchsorted(codes, b)] = g["w"].to_numpy()
+        nets[int(year)] = (codes, W)
+    out = {"nets": nets, "names": nm, "products": sorted(products)}
     cache.parent.mkdir(parents=True, exist_ok=True)
-    np.savez(cache, codes=codes, W=W)
-    return codes, W
+    cache.write_bytes(pickle.dumps(out))
+    return out
+
+
+def find_focus():
+    def find(key, default):
+        for c, n in NAMES.items():
+            if key in n.lower():
+                return int(c)
+        return default if any(default in n["codes"] for n in NETS.values()) else None
+    FOCUS["russia"], FOCUS["ukraine"] = find("russia", 643), find("ukraine", 804)
 
 
 def load_all():
     try:
         if not DATA.is_dir():
             raise FileNotFoundError(f"DATA_DIR {DATA} not found")
-        load_names()
-        for f in sorted(DATA.glob("*.csv")):
-            low = f.name.lower()
-            if "country" in low or "product" in low:
-                continue
-            m = re.search(r"Y(20\d{2})", f.name) or re.search(r"(?<!\d)(20\d{2})(?!\d)", f.name)
-            if not m:
-                continue
-            year = int(m.group(1))
-            STATE["status"] = f"loading {year}"
-            codes, W = read_year(f, year)
+        d = read_all()
+        NAMES.update(d["names"])
+        PRODUCTS[:] = d["products"]
+        if len(PRODUCTS) > 1:
+            log.warning("file contains %d distinct products (%s ...); set PRODUCT to filter", len(PRODUCTS), PRODUCTS[:3])
+        for year, (codes, W) in sorted(d["nets"].items()):
             NETS[year] = {"codes": codes, "names": [NAMES.get(int(c), str(c)) for c in codes], "W": W}
-            log.info("loaded %s: %d nodes, %d edges", year, len(codes), int((W > 0).sum()))
-        if not NETS:
-            raise FileNotFoundError(f"no yearly CSV files found in {DATA}")
+            log.info("loaded %s: %d countries, %d links", year, len(codes), int((W > 0).sum()))
+        find_focus()
         STATE["status"] = "ready"
     except Exception as e:
         STATE["status"] = f"error: {e}"
@@ -114,14 +151,14 @@ def pick_years(req_years: Optional[list[int]]):
 # ------------------------------------------------------------------ endpoints
 @app.get("/api/status")
 def status():
-    return {"status": STATE["status"], "years": years(), "weight": WEIGHT, "hs": HS}
+    return {"status": STATE["status"], "years": years(), "weight": WEIGHT, "focus": FOCUS, "products": PRODUCTS[:5]}
 
 
 @app.get("/api/summary")
 def summary():
     if (r := ready_or_503()): return r
     if "summary" not in CACHE:
-        CACHE["summary"] = {str(y): sim.year_summary(n["codes"], n["names"], n["W"]) for y, n in sorted(NETS.items())}
+        CACHE["summary"] = {str(y): sim.year_summary(n["codes"], n["names"], n["W"], FOCUS["russia"], FOCUS["ukraine"]) for y, n in sorted(NETS.items())}
     return CACHE["summary"]
 
 
@@ -142,6 +179,38 @@ def network(year: Optional[int] = None):
         n = NETS[year]
         CACHE[("net", year)] = sim.network_payload(n["codes"], n["names"], n["W"], year)
     return CACHE[("net", year)]
+
+
+@app.get("/api/country")
+def country(year: int, code: int):
+    """Profile of one country in one year: volumes, ranks, main partners, and its history across years."""
+    if (r := ready_or_503()): return r
+    if year not in NETS:
+        return JSONResponse({"error": "unknown year"}, 404)
+    n = NETS[year]
+    idx = np.flatnonzero(n["codes"] == code)
+    if not len(idx):
+        return JSONResponse({"error": "country does not trade in this year"}, 404)
+    i, W, tot = int(idx[0]), n["W"], n["W"].sum()
+    ex, im = W.sum(1), W.sum(0)
+
+    def partners(v):
+        return [{"code": int(n["codes"][k]), "name": n["names"][k], "volume": float(v[k]), "share": float(100 * v[k] / v.sum())}
+                for k in np.argsort(v)[::-1][:6] if v[k] > 0]
+
+    hist = {}
+    for y, m in sorted(NETS.items()):
+        k = np.flatnonzero(m["codes"] == code)
+        e = float(m["W"][k[0]].sum()) if len(k) else 0.0
+        im_ = float(m["W"][:, k[0]].sum()) if len(k) else 0.0
+        hist[str(y)] = {"exports": e, "imports": im_, "export_share": 100 * e / m["W"].sum()}
+    return {"code": code, "name": n["names"][i], "year": year, "exports": float(ex[i]), "imports": float(im[i]),
+            "export_share": float(100 * ex[i] / tot), "import_share": float(100 * im[i] / tot),
+            "export_rank": int((ex > ex[i]).sum() + 1) if ex[i] > 0 else None,
+            "import_rank": int((im > im[i]).sum() + 1) if im[i] > 0 else None,
+            "n_buyers": int((W[i] > 0).sum()), "n_suppliers": int((W[:, i] > 0).sum()),
+            "top_buyers": partners(W[i]) if ex[i] > 0 else [], "top_suppliers": partners(W[:, i]) if im[i] > 0 else [],
+            "history": hist}
 
 
 class RobReq(BaseModel):
