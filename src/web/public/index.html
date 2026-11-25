@@ -24,18 +24,22 @@
 <main>
 <!-- ============ 1. NETWORK ============ -->
 <section id="network" class="tab on">
-  <p class="lede">Each circle is a country; each line is crude oil flowing from an exporter to an importer. <b>Pick a year, then click any country</b> to see who it buys from and sells to.</p>
+  <p class="lede">Crude oil trade drawn on a world map: each country is shaded by how much it matters, and curved lines show oil flowing from an exporter to an importer. <b>Hover a country to see its busiest links, click it for the full picture</b>, and pick a year to see how the map changes.</p>
   <div class="toolbar">
     <div class="field"><span class="lbl">Year</span><div class="seg" id="net-years"></div></div>
-    <div class="field"><label class="lbl" for="net-metric">Size countries by</label><select id="net-metric"></select></div>
+    <div class="field"><label class="lbl" for="net-metric">Shade countries by</label><select id="net-metric"></select></div>
     <div class="field grow"><label class="lbl" for="net-search">Find a country</label><input id="net-search" list="country-list" placeholder="e.g. Russia, India, China…" autocomplete="off"><datalist id="country-list"></datalist></div>
   </div>
   <p class="metric-desc" id="metric-desc"></p>
   <div id="net-stats" class="stats"></div>
   <div class="grid-net">
     <div class="panel graph-wrap">
-      <div class="legend"><span><i class="dot exp"></i>mostly exports</span><span><i class="dot imp"></i>mostly imports</span><span><i class="dot ring"></i>Russia / Ukraine</span><span class="muted">line width = volume · drag circles to rearrange</span></div>
-      <svg id="graph" viewBox="0 0 820 560" role="img" aria-label="Trade network graph"></svg>
+      <div class="viewbar">
+        <div class="map-tools"><span class="lbl">Links shown</span><div class="seg" id="map-flows" role="group" aria-label="Number of links shown"></div><button type="button" class="chip" id="map-reset">Reset view</button></div>
+      </div>
+      <div class="legend" id="legend-map"></div>
+      <svg id="map" viewBox="0 0 960 500" role="img" aria-label="World map of crude oil trade links"></svg>
+      <p class="hint" id="map-note" hidden></p>
       <div id="tip" class="tip" hidden></div>
     </div>
     <aside class="panel" id="profile"></aside>
@@ -119,6 +123,8 @@
 </main>
 <script src="/vendor/d3/d3.min.js"></script>
 <script src="/vendor/chart/chart.umd.js"></script>
+<script src="/vendor/topojson/topojson-client.min.js"></script>
+<script src="geo.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -61,6 +61,7 @@ async function boot() {
   const first = YEARS.includes(2022) ? 2022 : YEARS.at(-1);
   netYear = first;
   seg('#net-years', YEARS.map(y => ({ v: y, label: y })), first, y => { netYear = +y; loadNetwork(); });
+  seg('#map-flows', [{ v: 0, label: 'Selected only' }, { v: 40, label: 'Top 40' }, { v: 100, label: 'Top 100' }, { v: 250, label: 'Top 250' }], mapFlows, v => { mapFlows = +v; M?.flows(); });
   initRobust(); initScenario(); overview();
   await loadNetwork();
   $('#loading').classList.add('done');
@@ -68,22 +69,22 @@ async function boot() {
 
 /* ============ 1. NETWORK ============ */
 const METRICS = {
-  out_strength: ['Export volume', 'Volume of oil a country sells abroad. A big circle is a big supplier.'],
-  in_strength: ['Import volume', 'Volume of oil a country buys. A big circle is a big consumer.'],
+  out_strength: ['Export volume', 'Volume of oil a country sells abroad. Brighter amber means a bigger supplier.'],
+  in_strength: ['Import volume', 'Volume of oil a country buys. Brighter teal means a bigger consumer.'],
   out_degree: ['Number of customers', 'How many different countries it sells to.'],
   in_degree: ['Number of suppliers', 'How many different countries it buys from. More suppliers means more options if one fails.'],
   pr_out: ['Supplier influence (PageRank)', 'Counts not just how much a country sells but how well-connected its customers are.'],
-  pr_in: ['Buyer influence (PageRank)', 'Counts how much of the network ultimately flows toward a country.'],
+  pr_in: ['Buyer influence (PageRank)', 'Counts how much of the network ultimately flows toward a country. Brighter teal means more.'],
   betweenness: ['Bridge role (betweenness)', 'How often a country sits on the shortest trade path between two others. High values mark intermediaries the network leans on.'],
   closeness: ['Reach (closeness)', 'How few steps it takes to get from this country to all others.'],
 };
 $('#net-metric').innerHTML = Object.entries(METRICS).map(([k, v]) => `<option value="${k}">${v[0]}</option>`).join('');
-let netYear, NET, SEL = null, G = null;
+let netYear, NET, SEL = null, PROF = null, mapFlows = 100, GEO = null, M = null;
 const NETS = {};
 const metric = () => $('#net-metric').value;
 const mval = (d, m) => m.includes('strength') ? vol(d[m]) : m.includes('degree') ? fmt(d[m], 0) : fmt(d[m], 4);
 const isFocus = c => c === FOCUS.russia || c === FOCUS.ukraine;
-$('#net-metric').onchange = () => { renderMetricInfo(); renderRank(); renderGraph(); };
+$('#net-metric').onchange = () => { renderMetricInfo(); renderRank(); renderView(); };
 $('#net-search').onchange = e => {
   const q = e.target.value.trim().toLowerCase(); if (!q) return;
   const c = COUNTRIES.find(c => c.name.toLowerCase() === q) || COUNTRIES.find(c => c.name.toLowerCase().startsWith(q));
@@ -92,7 +93,8 @@ $('#net-search').onchange = e => {
 
 async function loadNetwork() {
   NET = NETS[netYear] ||= await api('network?year=' + netYear);
-  renderMetricInfo(); renderStats(); renderTopo(); renderRank(); renderGraph(); renderDeg();
+  renderMetricInfo(); renderStats(); renderTopo(); renderRank(); renderDeg();
+  await renderView();
   SEL ? selectCountry(SEL, true) : renderProfile(null);
 }
 function renderMetricInfo() { $('#metric-desc').textContent = METRICS[metric()][1]; $('#rank-metric').textContent = METRICS[metric()][0].toLowerCase(); }
@@ -126,46 +128,6 @@ function renderRank() {
 }
 $('#rank').onclick = e => { const r = e.target.closest('tr[data-code]'); r && selectCountry(+r.dataset.code); };
 
-function renderGraph() {
-  const m = metric(), svg = d3.select('#graph'); svg.selectAll('*').remove();
-  let nodes = [...NET.nodes].sort((a, b) => b[m] - a[m]).slice(0, 70);
-  [SEL, FOCUS.russia, FOCUS.ukraine].forEach(c => { const n = NET.nodes.find(x => x.code === c); if (n && !nodes.includes(n)) nodes.push(n); });
-  nodes = nodes.map(d => ({ ...d }));
-  const ids = new Set(nodes.map(n => n.code));
-  const links = NET.edges.filter(e => ids.has(e.s) && ids.has(e.t)).map(e => ({ source: e.s, target: e.t, w: e.w }));
-  const r = d3.scaleSqrt().domain([0, d3.max(nodes, d => d[m]) || 1]).range([3.5, 30]);
-  const lw = d3.scaleSqrt().domain([0, d3.max(links, d => d.w) || 1]).range([.4, 6]);
-  const col = d3.scaleLinear().domain([-1, 0, 1]).range(['#45c0d0', '#8d9dab', '#f2a33a']);
-  const bal = d => { const s = d.out_strength + d.in_strength; return s ? (d.out_strength - d.in_strength) / s : 0; };
-  const topSet = new Set([...nodes].sort((a, b) => b[m] - a[m]).slice(0, 12).map(n => n.code));
-  const sim = d3.forceSimulation(nodes).force('link', d3.forceLink(links).id(d => d.code).distance(75).strength(.22))
-    .force('charge', d3.forceManyBody().strength(-140)).force('center', d3.forceCenter(410, 280)).force('collide', d3.forceCollide(d => r(d[m]) + 3));
-  const L = svg.append('g').attr('stroke', '#9fb3c4').selectAll('line').data(links).join('line').attr('stroke-width', d => lw(d.w)).attr('stroke-opacity', .22);
-  const N = svg.append('g').selectAll('g').data(nodes).join('g').style('cursor', 'pointer').call(d3.drag()
-    .on('start', (e, d) => { if (!e.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; })
-    .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; }).on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = d.fy = null; }));
-  const C = N.append('circle').attr('r', d => r(d[m])).attr('fill', d => col(bal(d))).attr('fill-opacity', .9);
-  const T = N.append('text').text(d => d.name).attr('text-anchor', 'middle').attr('dy', d => -r(d[m]) - 5);
-  const style = () => {
-    C.attr('stroke', d => d.code === SEL ? '#fff' : isFocus(d.code) ? '#fff' : '#0b1218').attr('stroke-width', d => d.code === SEL ? 3.5 : isFocus(d.code) ? 2 : 1)
-      .attr('stroke-dasharray', d => isFocus(d.code) && d.code !== SEL ? '3 2' : null);
-    T.attr('display', d => topSet.has(d.code) || isFocus(d.code) || d.code === SEL ? null : 'none');
-  };
-  G = { style, ids };
-  style();
-  const wrap = $('.graph-wrap'), tip = $('#tip');
-  N.on('mouseenter', (e, d) => {
-    const nb = new Set([d.code]); links.forEach(l => { if (l.source.code === d.code) nb.add(l.target.code); if (l.target.code === d.code) nb.add(l.source.code); });
-    N.attr('opacity', x => nb.has(x.code) ? 1 : .15); T.attr('display', x => nb.has(x.code) ? null : 'none');
-    L.attr('stroke-opacity', l => l.source.code === d.code || l.target.code === d.code ? .75 : .04);
-    tip.hidden = false; tip.innerHTML = `<b>${esc(d.name)}</b><br>${METRICS[m][0]}: ${mval(d, m)}<br>Exports ${vol(d.out_strength)} · Imports ${vol(d.in_strength)} ${UNIT.label}<br><span class="muted">Click for details</span>`;
-  }).on('mousemove', e => { const b = wrap.getBoundingClientRect(); tip.style.left = Math.min(e.clientX - b.left + 14, b.width - 250) + 'px'; tip.style.top = e.clientY - b.top + 14 + 'px'; })
-    .on('mouseleave', () => { N.attr('opacity', 1); L.attr('stroke-opacity', .22); style(); tip.hidden = true; })
-    .on('click', (e, d) => selectCountry(d.code));
-  sim.on('tick', () => { L.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-    N.attr('transform', d => `translate(${d.x = Math.max(25, Math.min(795, d.x))},${d.y = Math.max(25, Math.min(535, d.y))})`); });
-}
-
 function renderDeg() {
   const ccdf = k => { const v = NET.nodes.map(n => n[k]).filter(x => x > 0), u = [...new Set(v)].sort((a, b) => a - b);
     return u.map(x => ({ x, y: v.filter(z => z >= x).length / v.length })); };
@@ -175,19 +137,121 @@ function renderDeg() {
     options: { scales: { x: { type: 'logarithmic', title: { display: true, text: 'number of partners (k)' } }, y: { type: 'logarithmic', title: { display: true, text: 'share of countries with at least k' } } } } });
 }
 
+
+/* ---------- world map ---------- */
+const HUE = { out_strength: '#f2a33a', out_degree: '#f2a33a', pr_out: '#f2a33a', in_strength: '#45c0d0', in_degree: '#45c0d0', pr_in: '#45c0d0', betweenness: '#b79cf2', closeness: '#b79cf2' };
+async function renderView() {
+  try { await ensureGeo(); renderMap(); }
+  catch (e) { banner('Could not load the map: ' + e.message, true); }
+}
+/* load boundaries once; match the user's countries to them; anchor each country at the centre of its largest landmass */
+async function ensureGeo() {
+  if (GEO) return GEO;
+  banner('Loading the map…');
+  const topo = await (await fetch('/vendor/world/countries-50m.json')).json();
+  const feats = topojson.feature(topo, topo.objects.countries).features;
+  const { place, unplaced } = Geo.match(feats.map(f => ({ id: f.id, name: f.properties.name })), COUNTRIES, ST.codes_numeric !== false);
+  const cent = feats.map(f => { let g = f.geometry;
+    if (g.type === 'MultiPolygon') { let best = null, ba = -1; g.coordinates.forEach(c => { const p = { type: 'Polygon', coordinates: c }, a = d3.geoArea(p); if (a > ba) { ba = a; best = p; } }); g = best; }
+    return d3.geoCentroid(g); });
+  GEO = { feats, place, unplaced, cent }; banner(''); return GEO;
+}
+
+/* Countries are the nodes: land is shaded by the chosen metric and links are arcs between countries; there are no markers. */
+function renderMap() {
+  const W = 960, H = 500, m = metric(), hue = HUE[m], svg = d3.select('#map'); svg.selectAll('*').remove();
+  const proj = d3.geoNaturalEarth1().fitSize([W, H], { type: 'Sphere' }), path = d3.geoPath(proj);
+  const at = {}, byFeat = {};
+  NET.nodes.forEach(n => { const f = GEO.place[n.code]; if (f != null) { at[n.code] = { ...n, feat: f, pt: GEO.cent[f] }; byFeat[f] = at[n.code]; } });
+  const vmax = d3.max(Object.values(at), n => n[m]) || 1, ramp = d3.interpolateRgb('#1a2833', hue);
+  const shade = n => n[m] > 0 ? ramp(.16 + .84 * Math.pow(n[m] / vmax, .4)) : '#17232e';
+  const ranked = Object.values(at).sort((a, b) => b[m] - a[m]);
+  $('#legend-map').innerHTML = `<span>${METRICS[m][0]}: low<i class="ramp" style="background:linear-gradient(90deg,#1a2833,${hue})"></i>high</span><span><i class="line out"></i>sells to</span><span><i class="line in"></i>buys from</span><span class="muted">scroll to zoom · drag to pan</span>`;
+
+  const g = svg.append('g');
+  g.append('path').datum({ type: 'Sphere' }).attr('d', path).attr('fill', '#0c1722').attr('stroke', '#1d2b38');
+  g.append('path').datum(d3.geoGraticule10()).attr('d', path).attr('fill', 'none').attr('stroke', '#142230').attr('stroke-width', .5);
+  const land = g.append('g').selectAll('path').data(GEO.feats.map((f, i) => ({ f, i })).filter(d => d.f.properties.name !== 'Antarctica')).join('path')
+    .attr('d', d => path(d.f)).attr('class', d => 'land' + (byFeat[d.i] ? ' has' : '')).attr('fill', d => byFeat[d.i] ? shade(byFeat[d.i]) : '#0f1923');
+  const bgG = g.append('g'), hoverG = g.append('g'), selG = g.append('g'), ringG = g.append('g'), labG = g.append('g');
+  const arc = (a, b) => path({ type: 'LineString', coordinates: [at[a].pt, at[b].pt] });
+  const ok = e => at[e.s] && at[e.t];
+  const T = labG.selectAll('text').data(Object.values(at)).join('text').text(d => d.name).attr('x', d => proj(d.pt)[0]).attr('text-anchor', 'middle');
+  let k = 1;
+  /* Label placement: most important first, skip any label that would overlap one already placed; more labels as you zoom in. */
+  const labels = f => {
+    const limit = k < 2 ? 14 : k < 4 ? 30 : 70, pool = new Set(ranked.slice(0, limit));
+    [SEL, FOCUS.russia, FOCUS.ukraine].forEach(c => at[c] && pool.add(at[c]));
+    const prio = d => d.code === SEL ? 2 : isFocus(d.code) ? 1 : 0, placed = [], show = new Set();
+    [...pool].sort((a, b) => prio(b) - prio(a) || b[m] - a[m]).forEach(d => {
+      const [x, y] = proj(d.pt), w = (d.name.length * 5.4 + 6) / f, h = 13 / f, box = [x - w / 2, y - h / 2, x + w / 2, y + h / 2];
+      if (prio(d) || !placed.some(p => box[0] < p[2] && box[2] > p[0] && box[1] < p[3] && box[3] > p[1])) { show.add(d.code); placed.push(box); }
+    });
+    T.attr('display', d => show.has(d.code) ? null : 'none');
+  };
+  const sizes = () => { const f = Math.pow(k, .6); T.attr('font-size', 11 / f).attr('y', d => proj(d.pt)[1] + 4 / f).style('stroke-width', 3 / f); ringG.selectAll('circle').attr('r', 9 / Math.pow(k, .8)); labels(f); };
+
+  function flows() {
+    bgG.selectAll('*').remove(); selG.selectAll('*').remove();
+    if (mapFlows) {
+      const bg = NET.edges.filter(ok).slice(0, mapFlows), lw = d3.scaleSqrt().domain([0, bg[0]?.w || 1]).range([.5, 3.5]);
+      bgG.selectAll('path').data(bg).join('path').attr('class', 'fl-bg').attr('d', e => arc(e.s, e.t)).attr('stroke-width', e => lw(e.w));
+    }
+    if (PROF && PROF.code === SEL && PROF.year === netYear && at[SEL]) {
+      const out = PROF.flows_out.filter(f => at[f.code]).slice(0, 60).map(f => ({ s: SEL, t: f.code, w: f.volume, dir: 'out' }));
+      const inn = PROF.flows_in.filter(f => at[f.code]).slice(0, 60).map(f => ({ s: f.code, t: SEL, w: f.volume, dir: 'in' }));
+      const all = [...out, ...inn], lw = d3.scaleSqrt().domain([0, d3.max(all, e => e.w) || 1]).range([1, 5]);
+      selG.selectAll('path').data(all).join('path').attr('class', e => 'fl ' + e.dir).attr('d', e => arc(e.s, e.t)).attr('stroke-width', e => lw(e.w))
+        .append('title').text(e => `${at[e.s].name} → ${at[e.t].name}: ${vol(e.w)} ${UNIT.label}`);
+    }
+  }
+  function hover(code) {      // busiest links of the country under the pointer (from the top-600 links)
+    hoverG.selectAll('*').remove(); bgG.attr('opacity', code == null ? 1 : .25);
+    if (code == null) return;
+    const es = NET.edges.filter(e => ok(e) && (e.s === code || e.t === code)).slice(0, 40), lw = d3.scaleSqrt().domain([0, es[0]?.w || 1]).range([1, 4.5]);
+    hoverG.selectAll('path').data(es).join('path').attr('class', e => 'fl-hover ' + (e.s === code ? 'out' : 'in')).attr('d', e => arc(e.s, e.t)).attr('stroke-width', e => lw(e.w));
+  }
+  function restyle() {
+    const sel = n => n && n.code === SEL;
+    land.attr('stroke', d => sel(byFeat[d.i]) ? '#fff' : isFocus(byFeat[d.i]?.code) ? '#b9c8d4' : '#2a3c4b').attr('stroke-width', d => sel(byFeat[d.i]) ? 1.6 : isFocus(byFeat[d.i]?.code) ? .8 : .5)
+      .attr('stroke-dasharray', d => isFocus(byFeat[d.i]?.code) && !sel(byFeat[d.i]) ? '3 3' : null);
+    ringG.selectAll('*').remove();                      // a single ring marks the selected country so small ones can be found
+    if (at[SEL]) ringG.append('circle').attr('class', 'ring').attr('cx', proj(at[SEL].pt)[0]).attr('cy', proj(at[SEL].pt)[1]);
+    sizes(); flows();
+  }
+  M = { restyle, flows };
+
+  const wrap = $('.graph-wrap'), tip = $('#tip');
+  const move = e => { const b = wrap.getBoundingClientRect(); tip.style.left = Math.min(e.clientX - b.left + 14, b.width - 250) + 'px'; tip.style.top = e.clientY - b.top + 14 + 'px'; };
+  land.on('mouseenter', (e, d) => { const n = byFeat[d.i]; tip.hidden = false;
+      tip.innerHTML = n ? `<b>${esc(n.name)}</b><br>${METRICS[m][0]}: ${mval(n, m)}<br>Exports ${vol(n.out_strength)} · Imports ${vol(n.in_strength)} ${UNIT.label}<br><span class="muted">Click for details and all links</span>`
+        : `<b>${esc(d.f.properties.name)}</b><br><span class="muted">No crude oil trade recorded this year</span>`;
+      n && hover(n.code); })
+    .on('mousemove', move).on('mouseleave', () => { tip.hidden = true; hover(null); });
+  land.filter(d => byFeat[d.i]).on('click', (e, d) => selectCountry(byFeat[d.i].code));
+  const zoom = d3.zoom().scaleExtent([1, 12]).extent([[0, 0], [W, H]]).translateExtent([[0, 0], [W, H]]).on('zoom', e => { k = e.transform.k; g.attr('transform', e.transform); sizes(); });
+  svg.call(zoom).on('dblclick.zoom', null);
+  $('#map-reset').onclick = () => svg.call(zoom.transform, d3.zoomIdentity);
+
+  const missing = NET.nodes.filter(n => GEO.place[n.code] == null), sum = (a, f) => a.reduce((t, n) => t + n[f], 0);
+  const note = $('#map-note'); note.hidden = !missing.length;
+  if (missing.length) note.textContent = `Not shown on the map (no location): ${missing.slice(0, 6).map(n => n.name).join(', ')}${missing.length > 6 ? ` and ${missing.length - 6} more` : ''}. Together they account for ${fmt(100 * sum(missing, 'out_strength') / sum(NET.nodes, 'out_strength'), 1)}% of exports and ${fmt(100 * sum(missing, 'in_strength') / sum(NET.nodes, 'in_strength'), 1)}% of imports. They still count in every statistic.`;
+  restyle();
+}
+
 /* country profile */
-async function selectCountry(code, quiet) {
-  SEL = code;
-  if (G) G.ids.has(code) ? G.style() : renderGraph();
-  renderRank();
-  try { renderProfile(await api(`country?year=${netYear}&code=${code}`)); }
+async function selectCountry(code) {
+  SEL = code; PROF = null;
+  M?.restyle(); renderRank();
+  try { PROF = await api(`country?year=${netYear}&code=${code}`); renderProfile(PROF); }
   catch (e) { const nm = COUNTRIES.find(c => c.code === code)?.name || 'This country'; $('#profile').innerHTML = `<div class="empty"><div class="big">${esc(nm)}</div><p>Not part of the ${netYear} trade network (no recorded crude oil flows that year).</p></div>`; }
+  M?.restyle();
 }
 function renderProfile(p) {
   const el = $('#profile');
   if (!p) {
     const quick = [FOCUS.russia, ...NET.topology && SUM[netYear].top_exporters.slice(0, 3).map(e => e.code), SUM[netYear].top_importers[0].code].filter((c, i, a) => c != null && a.indexOf(c) === i);
-    el.innerHTML = `<div class="empty"><div class="big">Country profile</div><p>Click a circle in the network, a row in the ranking, or search above, to see who a country buys from and sells to.</p>
+    el.innerHTML = `<div class="empty"><div class="big">Country profile</div><p>Click a country on the map, a row in the ranking, or search above, to see who a country buys from and sells to.</p>
       <div class="chips">${quick.map(c => `<button class="chip" data-code="${c}">${esc(COUNTRIES.find(x => x.code === c)?.name || c)}</button>`).join('')}</div></div>`;
     return;
   }
@@ -287,7 +351,7 @@ function renderRob() {
     let cls = 'flat', head = `Score ${fmt(b, 2)} in ${last}`, body = `10% of demand goes unmet after removing ${tp(last)} of ${unit}.`;
     if (ys.length > 1) {
       const d = b - a; cls = d < -.02 ? 'bad' : d > .02 ? 'good' : 'flat';
-      head = `${d < -.02 ? 'More fragile' : d > .02 ? 'More robust' : 'About as robust'} in ${last} than ${first}`;
+      head = d < -.02 ? `More fragile in ${last} than in ${first}` : d > .02 ? `More robust in ${last} than in ${first}` : `About as robust in ${last} as in ${first}`;
       body = `Score ${fmt(a, 2)} → ${fmt(b, 2)}. A 10% shortfall arrives after removing ${tp(first)} of ${unit} in ${first}, versus ${tp(last)} in ${last}.`;
     }
     return `<div class="insight ${cls}"><b>${LBL[s]}: ${head}</b><p>${body}</p></div>`;

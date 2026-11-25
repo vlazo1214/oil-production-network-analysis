@@ -17,5 +17,7 @@ app.use('/api', express.json({ limit: '1mb' }), async (req, res) => {
 });
 app.use('/vendor/d3', express.static('node_modules/d3/dist'));
 app.use('/vendor/chart', express.static('node_modules/chart.js/dist'));
+app.use('/vendor/world', express.static('node_modules/world-atlas'));
+app.use('/vendor/topojson', express.static('node_modules/topojson-client/dist'));
 app.use(express.static('public'));
 app.listen(3000, () => console.log('web on :3000 -> ' + API));

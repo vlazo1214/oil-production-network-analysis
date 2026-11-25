@@ -6,6 +6,7 @@
   --sans:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{color-scheme:dark}
 body{margin:0;background:var(--bg) radial-gradient(900px 420px at 8% -8%,rgba(242,163,58,.10),transparent 70%) no-repeat;color:var(--ink);font:15px/1.55 var(--sans);min-height:100vh}
 h1,h2,h3{margin:0}
@@ -83,8 +84,8 @@ select:hover,input:hover{border-color:var(--dim)}
 .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.8rem;color:var(--mute);margin-bottom:.4rem;align-items:center}
 .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:.35rem;vertical-align:-1px}
 .dot.exp{background:var(--amber)}.dot.imp{background:var(--teal)}.dot.ring{border:2px solid #fff}
+i.ramp{display:inline-block;width:90px;height:10px;border-radius:5px;vertical-align:-1px;margin:0 .4rem;border:1px solid var(--line2)}
 .dash{display:inline-block;width:26px;border-top:3px solid var(--mute);margin-right:.4rem;vertical-align:3px}
-svg#graph{width:100%;height:auto;display:block;background:radial-gradient(circle at 50% 45%,#13202a,#0b1218 75%);border-radius:10px;border:1px solid var(--line)}
 svg text{font:11px var(--sans);fill:#cfdae3;paint-order:stroke;stroke:#0b1218;stroke-width:3px;pointer-events:none}
 .tip{position:absolute;pointer-events:none;background:#0b1218;border:1px solid var(--line2);padding:.4rem .6rem;border-radius:8px;font-size:.82rem;z-index:5;box-shadow:0 6px 20px rgba(0,0,0,.4);max-width:240px}
 #profile{min-height:400px}
@@ -144,3 +145,22 @@ input[type=range]{width:100%;accent-color:var(--amber)}
 .insight.bad{border-left-color:var(--red)}.insight.good{border-left-color:var(--green)}.insight.flat{border-left-color:var(--dim)}
 .insight b{display:block;font:600 1rem var(--serif);margin-bottom:.2rem}.insight p{margin:0;color:#c5d0d9;font-size:.9rem}
 .chart{position:relative;height:340px}.chart.short{height:280px}.chart.tall{height:460px}
+
+/* map */
+.viewbar{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between;margin-bottom:.6rem}
+.map-tools{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+i.line{display:inline-block;width:22px;height:0;border-top:3px solid;margin-right:.35rem;vertical-align:3px}
+i.line.out{border-color:var(--amber)}i.line.in{border-color:var(--teal)}
+svg#map{width:100%;height:auto;display:block;background:#0a121a;border-radius:10px;border:1px solid var(--line);cursor:grab;touch-action:none}
+svg#map:active{cursor:grabbing}
+#map path,#map circle{vector-effect:non-scaling-stroke}
+#map .land{transition:fill .2s}#map .land.has{cursor:pointer}#map .land.has:hover{stroke:#dbe6ee;stroke-width:1.1}
+#map .fl-bg{fill:none;stroke:#9fb3c4;stroke-opacity:.2;stroke-linecap:round}
+#map .fl{fill:none;stroke-linecap:round;stroke-dasharray:7 7;animation:flow 1.1s linear infinite;stroke-opacity:.85}
+#map .fl.out{stroke:var(--amber)}#map .fl.in{stroke:var(--teal)}
+@keyframes flow{to{stroke-dashoffset:-28}}
+@media(prefers-reduced-motion:reduce){#map .fl{animation:none}}
+
+#map .fl-hover{fill:none;stroke-linecap:round;stroke-opacity:.95;pointer-events:none}
+#map .fl-hover.out{stroke:var(--amber)}#map .fl-hover.in{stroke:var(--teal)}
+#map .ring{fill:none;stroke:#fff;pointer-events:none}

@@ -23,6 +23,7 @@ NETS: dict[int, dict] = {}                       # year -> {codes, names, W}
 NAMES: dict[int, str] = {}
 STATE = {"status": "loading"}
 FOCUS: dict = {"russia": None, "ukraine": None}
+META = {"numeric": True}
 PRODUCTS: list = []
 CACHE: dict = {}
 POOL = ProcessPoolExecutor(max_workers=os.cpu_count() or 2)
@@ -45,7 +46,7 @@ def read_all():
     files = sorted(DATA.glob("*.csv"))
     if not files:
         raise FileNotFoundError(f"no CSV files found in {DATA}")
-    sig = hashlib.md5(json.dumps([[f.name, f.stat().st_size, int(f.stat().st_mtime)] for f in files] + [WCOL, PRODUCT]).encode()).hexdigest()[:12]
+    sig = hashlib.md5(json.dumps([[f.name, f.stat().st_size, int(f.stat().st_mtime)] for f in files] + [WCOL, PRODUCT, "v4"]).encode()).hexdigest()[:12]
     cache = DATA / "cache" / f"nets_{sig}.pkl"
     if cache.exists():
         return pickle.loads(cache.read_bytes())
@@ -79,7 +80,8 @@ def read_all():
 
     # numeric country codes are used as-is; otherwise (e.g. ISO3) assign ids and keep the labels as names
     raw = sorted(set(df["i"]) | set(df["j"]))
-    if all(re.fullmatch(r"\d+", c) for c in raw):
+    numeric = all(re.fullmatch(r"\d+", c) for c in raw)
+    if numeric:
         idmap = {c: int(c) for c in raw}
     else:
         idmap = {c: k + 1 for k, c in enumerate(raw)}
@@ -92,7 +94,7 @@ def read_all():
         W = np.zeros((len(codes), len(codes)))
         W[np.searchsorted(codes, a), np.searchsorted(codes, b)] = g["w"].to_numpy()
         nets[int(year)] = (codes, W)
-    out = {"nets": nets, "names": nm, "products": sorted(products)}
+    out = {"nets": nets, "names": nm, "products": sorted(products), "numeric": numeric}
     cache.parent.mkdir(parents=True, exist_ok=True)
     cache.write_bytes(pickle.dumps(out))
     return out
@@ -114,6 +116,7 @@ def load_all():
         d = read_all()
         NAMES.update(d["names"])
         PRODUCTS[:] = d["products"]
+        META["numeric"] = d.get("numeric", True)
         if len(PRODUCTS) > 1:
             log.warning("file contains %d distinct products (%s ...); set PRODUCT to filter", len(PRODUCTS), PRODUCTS[:3])
         for year, (codes, W) in sorted(d["nets"].items()):
@@ -151,7 +154,7 @@ def pick_years(req_years: Optional[list[int]]):
 # ------------------------------------------------------------------ endpoints
 @app.get("/api/status")
 def status():
-    return {"status": STATE["status"], "years": years(), "weight": WEIGHT, "focus": FOCUS, "products": PRODUCTS[:5]}
+    return {"status": STATE["status"], "years": years(), "weight": WEIGHT, "focus": FOCUS, "products": PRODUCTS[:5], "codes_numeric": META["numeric"]}
 
 
 @app.get("/api/summary")
@@ -198,6 +201,9 @@ def country(year: int, code: int):
         return [{"code": int(n["codes"][k]), "name": n["names"][k], "volume": float(v[k]), "share": float(100 * v[k] / v.sum())}
                 for k in np.argsort(v)[::-1][:6] if v[k] > 0]
 
+    def flows(v):
+        return [{"code": int(n["codes"][k]), "volume": float(v[k])} for k in np.argsort(v)[::-1] if v[k] > 0]
+
     hist = {}
     for y, m in sorted(NETS.items()):
         k = np.flatnonzero(m["codes"] == code)
@@ -210,7 +216,7 @@ def country(year: int, code: int):
             "import_rank": int((im > im[i]).sum() + 1) if im[i] > 0 else None,
             "n_buyers": int((W[i] > 0).sum()), "n_suppliers": int((W[:, i] > 0).sum()),
             "top_buyers": partners(W[i]) if ex[i] > 0 else [], "top_suppliers": partners(W[:, i]) if im[i] > 0 else [],
-            "history": hist}
+            "flows_out": flows(W[i]), "flows_in": flows(W[:, i]), "history": hist}
 
 
 class RobReq(BaseModel):

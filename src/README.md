@@ -26,4 +26,22 @@ Russia and Ukraine are found by name (falling back to codes 643 / 804).
 - Removing an importer also removes its demand, so read "unmet demand" together with "volume delivered".
 - Edge removal does not reduce exporter capacity, so with "new suppliers" on it is mostly absorbed; leave it off to see route fragility.
 
+## World map (the network view)
+*Network structure* is a single world map; the old force-directed graph is gone. Countries are the nodes: there are no
+circles or markers, only land, links and labels.
+- **Shading:** each country is shaded by the metric chosen under *Shade countries by* (amber = export-side metrics,
+  teal = import-side, violet = betweenness/closeness). Grey-dark land has no recorded trade that year.
+- **Links:** curved great-circle arcs from exporter to importer. *Links shown* picks the busiest 40/100/250, or none
+  (*Selected only*).
+- **Hover** a country to highlight its busiest links; **click** it (or use search or the ranking table) for animated
+  links to every partner (amber = sells to, teal = buys from) and the country profile. A single ring marks the selected
+  country so tiny ones (Singapore, Bahrain) can be found. Scroll to zoom, drag to pan, *Reset view* to return.
+- **Labels** are placed most-important-first and skip anything that would overlap; more appear as you zoom.
+- Boundaries: Natural Earth via the `world-atlas` package (50 m), served from `node_modules`, so it works offline.
+- Placement: each country is matched to a boundary by **name** (handles BACI-style names such as "USA", "Rep. of Korea",
+  "Türkiye"), falling back to its numeric code (including CEPII codes that differ from ISO, e.g. USA 842, India 699).
+  Links attach to the centre of each country's largest landmass.
+- Entries with no location (e.g. "Free Zones", "Areas, nes", "Bunkers") are listed under the map with their share of
+  flow; they still count in every statistic. If a real country is missing, add its spelling to `PAIRS` in `web/public/geo.js`.
+
 API: `GET /api/status|summary|countries|network?year=|country?year=&code=`, `POST /api/robustness|scenario`.
